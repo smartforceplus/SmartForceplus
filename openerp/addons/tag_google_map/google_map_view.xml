@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form_inheritgo">
+            <field name="name">res.partner.form.inheritgo</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="street2" position="after">
+                    <button name="open_map1" string="Map" type="object" icon="gtk-zoom-in"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

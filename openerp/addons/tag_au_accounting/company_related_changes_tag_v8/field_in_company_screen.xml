@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="add_acn_field_in_company_ept">
+			<field name="name">add.acn.field.in.company.ept</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<xpath
+					expr="//field[@name='company_registry']"
+					position="after">
+					<field name = "acn_number"/>
+					<field name = "abn_number"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

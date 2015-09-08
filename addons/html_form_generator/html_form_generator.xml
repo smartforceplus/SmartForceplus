@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+      <record model="ir.ui.view" id="html_form_view2">
+         <field name="name">tag.html.form</field>
+         <field name="model">html.formgen</field>
+         <field name="arch" type="xml">
+             <form string="HTML Form">
+                  <sheet>
+                      <group>
+                          <field name="name"/>
+                          <field name="campaign_id"/>
+                          <field name="tag_id"/>
+                          <field name="fields_ids"/>
+                          <field name="output_html"/>
+                      </group>
+                      <footer>
+                          <button type="object" name="generate_form" string="Make Embed Code"/> 
+                      </footer>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="html_tree_view">
+         <field name="name">tag.html.tree</field>
+         <field name="model">html.formgen</field>
+         <field name="arch" type="xml">
+             <tree>
+                 <field name="name"/>
+	         <field name="campaign_id"/>
+             </tree>
+         </field>
+      </record>
+      
+      <record model="ir.ui.view" id="html_search_view">
+          <field name="name">tag.html.search</field>
+          <field name="model">html.formgen</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+	          <field name="campaign_id"/>
+	      </search>
+          </field>
+      </record>
+          
+          
+      <record model="ir.actions.act_window" id="html_list_action">
+          <field name="name">HTML</field>
+          <field name="res_model">html.formgen</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+              <p class="oe_view_nocontent_create">Create the first HTML Embed form</p>
+          </field>
+      </record>
+          
+          
+
+      <record model="ir.ui.view" id="html_wizard">
+          <field name="name">HTML Wizard</field>
+          <field name="model">html.trans</field>
+          <field name="arch" type="xml">
+             <form string="HTML Form">
+                  <group>
+                     <field name="name"/>
+                     <field name="campaign_id"/>
+                  </group>
+                  <footer>
+                      <button type="object" name="setup_form" string="Make Form"/>
+                  </footer>
+              </form>
+          </field>
+      </record>
+      
+      <record model="ir.actions.act_window" id="html_wizard_action">
+      	            <field name="name">HTML</field>
+      	            <field name="res_model">html.trans</field>
+      	            <field name="view_type">form</field>
+      	            <field name="view_mode">form</field>
+      	            <field name="target">new</field>
+      </record>
+      
+      <record model="ir.ui.view" id="html_camp_view">
+          <field name="name">marketing.campaign.form.inh</field>
+          <field name="model">marketing.campaign</field>
+          <field name="inherit_id" ref="marketing_campaign.view_marketing_campaign_form" />
+	  <field name="arch" type="xml">
+	      <field name="unique_field_id" position="after">
+	          <button name='%(html_form_generator.html_wizard_action)d' string="Create HTML Form" type="action" class="oe_highlight"  />
+	      </field>
+	  </field>
+      </record>
+        
+      <!-- the following menuitem should appear *after* its parent openacademy_menu and *after* its action course_list_action -->
+      <menuitem id="html_menu" name="Campaign Embed Forms" parent="marketing_campaign.menu_marketing_campaign" action="html_list_action" sequence="80"/>
+        
+  </data>
+</openerp>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_opportunity_customer" model="ir.ui.view">
+            <field name="name">opportunity.partner.form</field>
+            <field name="model">opportunity.customer</field>
+            <field name="arch" type="xml">
+                <form string="Convert to Customer">
+                    <group name="name">
+                        <field name="name" on_change="onchange_action(name, context)" class="oe_inline"/>
+                        <field name="partner_id"
+                            attrs="{'required': [('name', '=', 'exist')], 'invisible':[('name','!=','exist')]}"
+                            class="oe_inline"/>
+                    </group>
+                    <footer>
+                        <button name="action_apply" string="Convert to Customer" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_opportunity_customer" model="ir.actions.act_window">
+            <field name="name">Convert to Customer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">opportunity.customer</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_opportunity_customer"/>
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</openerp>

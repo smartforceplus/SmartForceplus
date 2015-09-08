@@ -1,0 +1,43 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sun, 30 Aug 2015 13:36:32 -0500
+Received: from mail-ig0-f170.google.com ([209.85.213.170]:33264)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZW7Sy-000HJk-H2
+ for task@smartforceplus.com; Sun, 30 Aug 2015 13:36:32 -0500
+Received: by igbuu8 with SMTP id uu8so34919586igb.0
+ for <task@smartforceplus.com>; Sun, 30 Aug 2015 11:36:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=gf7EJcgVxcn3X7b3F4fcajVHez0cjZUFHqZKAp3qL8Q=;
+ b=Veru71yHTjkLCnFfgkU8XNmvWJFVfJqGv9LV1qTidANGxbKBPGrN6lNXZLMyqwIYWR
+ K+lsqvn2iN+gQHLMlShp47OHRTribgw8s46NpcuR3ymbVI4andeA/+h5FPOjQbYfHev1
+ dAFlgeK6QbqSGBv3AwacihI49dLGrIqYkr20LACSljeuadeXIcj2A0keyA9a1GH654fN
+ N9uzEZNfDASITeja47Z+D151ElIBpHLL1STivWtWNTQhd43J3ePgLPc8CLBX4lH8XJL4
+ F/N2HLqNDPMFDx+YOO4vb35Ue5cOFIHN4mp74bA3bBaHCZoIo/gEwLay431yzSbZJLyi
+ P2fQ==
+MIME-Version: 1.0
+X-Received: by 10.50.66.234 with SMTP id i10mr11573464igt.62.1440959789949;
+ Sun, 30 Aug 2015 11:36:29 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 11:36:29 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 11:36:29 -0700 (PDT)
+Date: Mon, 31 Aug 2015 04:36:29 +1000
+X-Google-Sender-Auth: zpIpvFMjkEaGS2JteQCUVf2u0xw
+Message-ID: <CAJMZX9QJpjRi3kyrNyOna9hyTvgx9DU6Vi-cRXuN49c81GdFLQ@mail.gmail.com>
+Subject: Send eMail template through code | Odoo
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=047d7bdc1a6c6a67a1051e8b988d
+
+--047d7bdc1a6c6a67a1051e8b988d
+Content-Type: text/plain; charset=UTF-8
+
+https://www.odoo.com/forum/help-1/question/send-email-template-through-code-21588#21674
+
+--047d7bdc1a6c6a67a1051e8b988d
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="https://www.odoo.com/forum/help-1/question/send-email-template-through-code-21588#21674">https://www.odoo.com/forum/help-1/question/send-email-template-through-code-21588#21674</a></p>
+
+--047d7bdc1a6c6a67a1051e8b988d--

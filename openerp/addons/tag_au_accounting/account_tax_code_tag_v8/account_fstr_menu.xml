@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem icon="terp-stock_format-default"
+            id="parent_menu_account_fstr_tax_code"
+            name="GST Statement Template"
+            parent="account.menu_finance" 
+            sequence="8"/>
+
+        <menuitem action="action_account_fstr_tax_code_category_form"
+            id="menu_account_fstr_tax_code_category_form"
+            icon="STOCK_PREFERENCES"
+            name="GST Statement categories form"
+            parent="parent_menu_account_fstr_tax_code" />
+
+        <menuitem action="action_account_fstr_tax_code_category_tree"
+            id="menu_account_fstr_tax_code_category_tree"
+            icon="STOCK_PREFERENCES"
+            name="Financial Statement categories tree"
+            parent="parent_menu_account_fstr_tax_code" />
+
+        <menuitem action="action_account_fstr_tax_code_wizard"
+            id="menu_account_fstr_tax_code_wizard_form"
+            icon="STOCK_PRINT"
+            name="Print/Preview financial statements"
+            parent="parent_menu_account_fstr_tax_code" />
+
+    </data>
+</openerp>
+

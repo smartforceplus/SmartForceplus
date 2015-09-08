@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report auto        = "False"
+			    id          = "aged_partner_balance_mako_ept"
+			    model       = "account_fstr.category"
+			    name        = "Aged Partner Balance"
+			    file        = "accounts_reports_ept/reports/aged_partner_balance.mako"
+			    string      = "Aged Partner Balance"
+			    report_type = "webkit" />
+
+    </data>
+</openerp>

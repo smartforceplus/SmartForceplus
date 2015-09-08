@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_ftp_server_form" model="ir.ui.view">
+            <field name="name">view.help.menus.form</field>
+            <field name="model">tag.help</field>
+            <field name="arch" type="xml">
+                <form string="help menus">
+                    <field name='Name' />
+                    <field name='Location'/>
+                    <field name='Link'/>
+                    <field name='ForMenu' password="True"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ftp_server_tree" model="ir.ui.view">
+            <field name="name">view.help.menus.tree</field>
+            <field name="model">tag.help</field>
+            <field name="arch" type="xml">
+                <form string="help menus">
+                    <field name='Name' />
+                    <field name='Location'/>
+                    <field name='Link'/>
+                    <field name='ForMenu' password="True"/>
+                </tree>
+            </field>
+        </record>
+
+            <record model="ir.actions.act_window" id="tag_help_menus_form">
+                <field name="name">view.help.menus.form</field>
+                <field name="res_model">tag.help</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="limit">80</field>
+            </record>
+
+        <menuitem id="tag_help_menus" name="help menus" parent="base.menu_administration" sequence="1"/>
+
+        <menuitem
+            id="tag_help_menus_view"
+            name="tag_help_menus"
+            action="action_tag_help_form"
+            parent="tag_help_menus"/>
+
+
+
+
+    </data>
+</openerp>

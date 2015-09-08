@@ -1,0 +1,44 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Mon, 31 Aug 2015 17:07:21 -0500
+Received: from mail-ig0-f169.google.com ([209.85.213.169]:35617)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZWXEX-0006nQ-QS
+ for task@smartforceplus.com; Mon, 31 Aug 2015 17:07:21 -0500
+Received: by igbut12 with SMTP id ut12so34645167igb.0
+ for <task@smartforceplus.com>; Mon, 31 Aug 2015 15:07:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=+2cdJqUNV21s3ZFIsf7uinNaCaFT47vp5lwD89S1I3g=;
+ b=tiUC7KqLA/gKO1gFoL7zc3jHFEd6+g2kHJiOafn9oxmY5zMkmzwYE7dP1rELqIW8oO
+ vpCsjEQkSlJoqUddKz6VGpIll1qE/2/tkmempq3VwgLida4WWSwqH6g3cRLU8Wtza8Tv
+ RueATZp7TUXdUATqehk4kf8O25NI9czzQnCJIwYfkRnBkj/R2WX8Gk+27N/MdU5F6uBn
+ pR95qjDjnfB3OKaq8RY/s5CH6LY4RSqXsvK3r/J1bmo2PyKB04BUDKh9C3L8iPRb32HJ
+ qr/dMU8fy4ZVze0XD4ioabMsu1XSXLjNjle2C1OmJ9PVZTP3UvAkPTg8SeNEMFut0R3o
+ XYbQ==
+MIME-Version: 1.0
+X-Received: by 10.50.66.234 with SMTP id i10mr805412igt.62.1441058839852; Mon,
+ 31 Aug 2015 15:07:19 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Mon, 31 Aug 2015 15:07:10 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Mon, 31 Aug 2015 15:07:10 -0700 (PDT)
+Date: Tue, 1 Sep 2015 08:07:10 +1000
+X-Google-Sender-Auth: EHolLNdr5MUez1WwByqtlVKYV-k
+Message-ID: <CAJMZX9QsE3tUfnZu6otA7VBDCGn=L8J0DKZRvyH6QbVPrAbDTg@mail.gmail.com>
+Subject: This morning i sent an email
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com, lara@tagsbm.com
+Content-Type: multipart/alternative; boundary=047d7bdc1a6c3ffd31051ea2a8b7
+
+--047d7bdc1a6c3ffd31051ea2a8b7
+Content-Type: text/plain; charset=UTF-8
+
+In that email was a odoo 8 marketing..plz add that to the marketing libary
+in community site
+
+--047d7bdc1a6c3ffd31051ea2a8b7
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr">In that email was a odoo 8 marketing..plz add that to the marketing libary in community site</p>
+
+--047d7bdc1a6c3ffd31051ea2a8b7--

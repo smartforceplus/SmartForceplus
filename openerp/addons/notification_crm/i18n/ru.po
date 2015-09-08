@@ -1,0 +1,378 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* notification_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-16 15:43+0000\n"
+"PO-Revision-Date: 2015-03-16 18:47+0300\n"
+"Last-Translator: IT Libertas <info@itlibertas.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: notification_crm
+#: model:email.template,body_html:notification_crm.crm_lead_overdue_notification
+msgid ""
+"\n"
+"                <table border=\"1\" style=\"border-color:rgba(150, 150, 220, "
+"0.3);border-collapse: collapse;\" width=\"100%\">\n"
+"<tbody>\n"
+"<tr style=\"background-color:#b163a3;font-color:#ffffff\">\n"
+"<td colspan=\"2\" width=\"80%\" style=\"padding:2%;text-align: "
+"center;border-bottom:0px;\">\n"
+"<strong><big><font color=\"#ffffff\"><a style=\"color:"
+"#ffffff;\">Overpassed and Today Leads</a></font></big></strong>\n"
+"</td>\n"
+"</tr>\n"
+"<tr>\n"
+"<td colspan=\"2\" style=\"border-top:0px;border-bottom:0px;"
+"\">\n"
+"\n"
+"<table border=\"1\" style=\"border-color:rgba(150, 150, 220, 0.3);"
+"border-collapse: collapse;\" width=\"100%\">\n"
+"<tbody>\n"
+"\n"
+"<tr>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Opportunity</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Customer</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Next Action Date</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Action Name</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Delay Days</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Responsible</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Stage</strong>\n"
+"</td>\n"
+"</tr>\n"
+"% for o in object.lead_ids:\n"
+"<tr>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"<a href=\"${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}"
+"&view_type=form&model=crm.lead&action=${ctx['action']}\"><i>${o.name}</i></"
+"a>&nbsp;&nbsp;&nbsp;\n"
+"<a href=\"${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}"
+"&view_type=form&model=crm.lead&action=${ctx['action']}\" style=\"background-"
+"color: #5cb85c;padding: 2px 6px 2px 6px;border-top: 1px solid #4cae4c;border-"
+"right: 1px solid #4cae4c;border-bottom: 1px solid #4cae4c;border-left: 1px "
+"solid #4cae4c;text-decoration:none;border-radius: 5px;\"><span style=\"color:"
+"#FFFFFF;\">&gt;</span></a>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"% if o.partner_id\n"
+"${o.partner_id.name}\n"
+"% endif\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.date_action}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"% if o.title_action\n"
+"${o.title_action}\n"
+"% endif\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${(ctx['datetime'].now()-ctx['datetime'].strptime(o."
+"date_action,'%Y-%m-%d')).days}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.user_id.name}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.stage_id.name}\n"
+"</td>\n"
+"</tr>\n"
+"% endfor\n"
+"</tbody>\n"
+"</table>\n"
+"\n"
+"</td>\n"
+"</tr>\n"
+"<tr style=\"background-color:rgba(150,150,220,0.3);\">\n"
+"<td style=\"padding:1%;border-right:0px;border-top:0px;\"></"
+"td>\n"
+"<td style=\"text-align: right;padding:1%;border-left:0px;"
+"border-top:0px;\"><small><i>sent through<a href=\"${ctx['base_url']}\"> Odoo "
+"${ctx['company']}</a></i></small></td>\n"
+"</tr>\n"
+"</tbody>\n"
+"</table>\n"
+"                \n"
+"                "
+msgstr ""
+"\n"
+"                <table border=\"1\" style=\"border-color:rgba(150, 150, 220, "
+"0.3);border-collapse: collapse;\" width=\"100%\">\n"
+"<tbody>\n"
+"<tr style=\"background-color:#b163a3;font-color:#ffffff\">\n"
+"<td colspan=\"2\" width=\"80%\" style=\"padding:2%;text-align: "
+"center;border-bottom:0px;\">\n"
+"<strong><big><font color=\"#ffffff\"><a style=\"color:"
+"#ffffff;\">Оповещения по Лидам и Предложениям</a></font></big></strong>\n"
+"</td>\n"
+"</tr>\n"
+"<tr>\n"
+"<td colspan=\"2\" style=\"border-top:0px;border-bottom:0px;"
+"\">\n"
+"\n"
+"<table border=\"1\" style=\"border-color:rgba(150, 150, 220, 0.3);"
+"border-collapse: collapse;\" width=\"100%\">\n"
+"<tbody>\n"
+"\n"
+"<tr>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Предложение</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Заказчик</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Дата Сл Действия</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Действие</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Задержка</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Ответственный</strong>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);\">\n"
+"<strong>Этап</strong>\n"
+"</td>\n"
+"</tr>\n"
+"% for o in object.lead_ids:\n"
+"<tr>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"<a href=\"${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}"
+"&view_type=form&model=crm.lead&action=${ctx['action']}\"><i>${o.name}</i></"
+"a>&nbsp;&nbsp;&nbsp;\n"
+"<a href=\"${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}"
+"&view_type=form&model=crm.lead&action=${ctx['action']}\" style=\"background-"
+"color: #5cb85c;padding: 2px 6px 2px 6px;border-top: 1px solid #4cae4c;border-"
+"right: 1px solid #4cae4c;border-bottom: 1px solid #4cae4c;border-left: 1px "
+"solid #4cae4c;text-decoration:none;border-radius: 5px;\"><span style=\"color:"
+"#FFFFFF;\">&gt;</span></a>\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"% if o.partner_id\n"
+"${o.partner_id.name}\n"
+"% endif\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.date_action}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"% if o.title_action\n"
+"${o.title_action}\n"
+"% endif\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${(ctx['datetime'].now()-ctx['datetime'].strptime(o."
+"date_action,'%Y-%m-%d')).days}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.user_id.name}\n"
+"</td>\n"
+"<td style=\"padding:2%;border-color:rgba(150, 150, 220, 0.3);"
+"\">\n"
+"${o.stage_id.name}\n"
+"</td>\n"
+"</tr>\n"
+"% endfor\n"
+"</tbody>\n"
+"</table>\n"
+"\n"
+"</td>\n"
+"</tr>\n"
+"<tr style=\"background-color:rgba(150,150,220,0.3);\">\n"
+"<td style=\"padding:1%;border-right:0px;border-top:0px;\"></"
+"td>\n"
+"<td style=\"text-align: right;padding:1%;border-left:0px;"
+"border-top:0px;\"><small><i>отправлено с помощью<a href="
+"\"${ctx['base_url']}\"> Odoo ${ctx['company']}</a></i></small></td>\n"
+"</tr>\n"
+"</tbody>\n"
+"</table>\n"
+"                \n"
+"                "
+
+#. module: notification_crm
+#: field:notification.lead,create_uid:0
+msgid "Created by"
+msgstr "Создано"
+
+#. module: notification_crm
+#: field:notification.lead,create_date:0
+msgid "Created on"
+msgstr "Создано"
+
+#. module: notification_crm
+#: help:notification.lead,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Дата последнего сообщения"
+
+#. module: notification_crm
+#: model:ir.model,name:notification_crm.model_notification_lead
+msgid "Email Thread"
+msgstr "Обсуждение"
+
+#. module: notification_crm
+#: field:notification.lead,message_follower_ids:0
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: notification_crm
+#: help:notification.lead,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr "Содержит Историю Общения"
+
+#. module: notification_crm
+#: field:notification.lead,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: notification_crm
+#: help:notification.lead,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Если отмечено, сообщения требуют Вашего внимания"
+
+#. module: notification_crm
+#: field:notification.lead,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Подписчик"
+
+#. module: notification_crm
+#: field:notification.lead,message_last_post:0
+msgid "Last Message Date"
+msgstr "Дата Последнего Сообщения"
+
+#. module: notification_crm
+#: field:notification.lead,write_uid:0
+msgid "Last Updated by"
+msgstr "Последнее Обновление"
+
+#. module: notification_crm
+#: field:notification.lead,write_date:0
+msgid "Last Updated on"
+msgstr "Последнее Обновление"
+
+#. module: notification_crm
+#: model:mail.message.subtype,name:notification_crm.mt_lead_itl_notify
+msgid "Lead Notification"
+msgstr "Оповещение по Предложению"
+
+#. module: notification_crm
+#: field:notification.lead,lead_ids:0
+msgid "Lead with warning"
+msgstr "Предложение с предупреждением"
+
+#. module: notification_crm
+#: model:ir.model,name:notification_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Кандидат/Предложение"
+
+#. module: notification_crm
+#: code:addons/notification_crm/models/notification_lead.py:15
+#, python-format
+msgid "Leads Reminder"
+msgstr "Напоминание по Предложениям"
+
+#. module: notification_crm
+#: field:notification.lead,message_ids:0
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: notification_crm
+#: help:notification.lead,message_ids:0
+msgid "Messages and communication history"
+msgstr "История Общения"
+
+#. module: notification_crm
+#: code:addons/notification_crm/models/notification_lead.py:57
+#, python-format
+msgid "Overdue Leads"
+msgstr "Предложения с просрочкой"
+
+#. module: notification_crm
+#: code:addons/notification_crm/models/notification_lead.py:10
+#, python-format
+msgid "Reminder"
+msgstr "Напоминание"
+
+#. module: notification_crm
+#: model:mail.message.subtype,description:notification_crm.mt_lead_itl_notify
+msgid "Overdue List"
+msgstr "Список просроченных задач"
+
+#. module: notification_crm
+#: field:crm.case.stage,is_notify:0 field:crm.lead,notification_lead_re_id:0
+msgid "Send notification"
+msgstr "Отправлять напоминания"
+
+#. module: notification_crm
+#: help:crm.case.stage,is_notify:0
+msgid "Send notification for lead in this stage"
+msgstr "Отправлять уведомления по данному этапу"
+
+#. module: notification_crm
+#: model:ir.model,name:notification_crm.model_crm_case_stage
+msgid "Stage of case"
+msgstr "Этап сделки"
+
+#. module: notification_crm
+#: field:notification.lead,message_summary:0
+msgid "Summary"
+msgstr "Сводка"
+
+#. module: notification_crm
+#: field:notification.lead,message_unread:0
+msgid "Unread Messages"
+msgstr "Непрочитанные Сообщения"
+
+#. module: notification_crm
+#: field:notification.lead,user_id:0
+msgid "User notification"
+msgstr "Оповещение"
+
+#. module: notification_crm
+#: field:notification.lead,website_message_ids:0
+msgid "Website Messages"
+msgstr "Сообщения Сайта"
+
+#. module: notification_crm
+#: help:notification.lead,website_message_ids:0
+msgid "Website communication history"
+msgstr "История Общения"

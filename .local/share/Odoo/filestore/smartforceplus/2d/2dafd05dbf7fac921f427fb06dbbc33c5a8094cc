@@ -1,0 +1,43 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sun, 30 Aug 2015 06:50:26 -0500
+Received: from mail-ig0-f179.google.com ([209.85.213.179]:37925)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZW17y-000199-7N
+ for task@smartforceplus.com; Sun, 30 Aug 2015 06:50:26 -0500
+Received: by igbuu8 with SMTP id uu8so12473753igb.1
+ for <task@smartforceplus.com>; Sun, 30 Aug 2015 04:50:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=XFlJAMHQiSJlJVtwHlqIdtglxKM92oB8YPx3NRR16cI=;
+ b=DvjPhzfnrr0Y+CgsyWHlFYgVqYsYdfI+UOIg5dUdEpTzB5Umn7mtLscVmh9tglMNMy
+ Irjjabs99MwlfHZw4LXTtGBAgqpXCmTkJGYdtW2w/7BRa651lBLw1dEqrF1z8TZpxrRK
+ 2vF4ZPk06PECfl6rOKtakbsfpZ23iVnRuDzTGuKYOfOatlJxo1YxJYSmzKBWFScTwg03
+ WK5IDZueSSJuYs/ot/+uqcqI85sUtuE2l/fXt6hqYiOm6w3mk7eZwjNsgbHLQaTSZRyG
+ 1/RsaJbPss2wv44HgLj9dx3D2v/GBvQLBlZWtHzSQfyfq8wTeRhYRZdBeAYcYwAtCCIk
+ UArA==
+MIME-Version: 1.0
+X-Received: by 10.50.66.234 with SMTP id i10mr10444065igt.62.1440935424237;
+ Sun, 30 Aug 2015 04:50:24 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 04:50:24 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 04:50:24 -0700 (PDT)
+Date: Sun, 30 Aug 2015 21:50:24 +1000
+X-Google-Sender-Auth: WY5hEXmxQxwBvqZ_cUMzUSqdw9Y
+Message-ID: <CAJMZX9SY_5--4PNMDvV2gLYqixhM0pjFJYV_9nBsV_bW+jkgrg@mail.gmail.com>
+Subject: Can odoo work as an email autoresponder? | Odoo
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=047d7bdc1a6c1b38ca051e85ecce
+
+--047d7bdc1a6c1b38ca051e85ecce
+Content-Type: text/plain; charset=UTF-8
+
+https://www.odoo.com/forum/help-1/question/can-odoo-work-as-an-email-autoresponder-84730
+
+--047d7bdc1a6c1b38ca051e85ecce
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="https://www.odoo.com/forum/help-1/question/can-odoo-work-as-an-email-autoresponder-84730">https://www.odoo.com/forum/help-1/question/can-odoo-work-as-an-email-autoresponder-84730</a></p>
+
+--047d7bdc1a6c1b38ca051e85ecce--

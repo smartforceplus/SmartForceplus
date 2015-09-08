@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+    <record id="tag_account_report_group_ept" model="res.groups">
+        <field name="name">Account Reports By Email</field>
+    </record>
+	
+		<record id="account_send_email_config_ept" model="ir.config_parameter">            
+            <field name="key">account_report_email</field>
+            <field name="value">serviceby@thetagteam.co</field>
+		</record>
+	
+		<record id="schedule_account_report_ept" model="ir.cron">            
+            <field name="name">Account Report Email</field>
+			<field name="user_id" ref="base.user_root"/>
+            <field eval="True" name="active"/>
+			<field name="priority">5</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="model">schedule.account.reports</field>
+			<field name="function">schedule_report_print</field>
+			<field eval="([57,58], 'posted', False)" name="args"/>
+			<field eval="False" name="doall"/>
+		</record>
+</data>
+</openerp>

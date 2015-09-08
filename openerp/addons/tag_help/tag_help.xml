@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!-- tag help search view -->
+		<record id="tag_help" model="ir.ui.view">
+            <field name="name">view.tag.help.form</field>
+            <field name="model">tag.help</field>
+            <field name="arch" type="xml">
+                <form string="tag help">
+					<field name='Location'/>
+                    <field name='Name'/>
+					<field name='Link'/>
+					<field name='Action'/>
+                    
+                </form>
+            </field>
+        </record>
+	<!-- tag help tree view -->
+		<record model="ir.ui.view" id="tag_help_tree">
+            <field name="name">view.tag.help.form</field>
+            <field name="model">tag.help</field>
+            <field name="arch" type="xml">
+                <form string="tag help">
+                    <field name='Location'/>
+                    <field name='Name'/>
+					<field name='Link'/>
+					<field name='Action'/>
+                    
+                </form>
+            </field>
+        </record>
+	<!-- tag help form view -->
+		<record model="ir.ui.view" id="tag_help_form">
+            <field name="name">view.tag.help.tree</field>
+            <field name="model">tag.help</field>
+            <field name="arch" type="xml">
+                <form string="tag help">
+                    <field name='Location'/>
+                    <field name='Name'/>
+					<field name='Link'/>
+					<field name='Action'/>
+                    
+                </form>
+            </field>
+        </record>
+	<!-- tag help Action view -->
+		<record model="ir.actions.act_window" id="action_tag_help">
+            <field name="name">Tag Help</field>  
+            <field name="res_model">tag.help</field>  
+            <field name="target">current</field>  
+            <field name="view_type">form</field>  
+            <field name="view_mode">tree,form</field> 
+        </record>
+	<!-- Sales-->
+		<record model="ir.actions.act_url" id="sales_systrn_url">
+			<field name="name">Sales CRM System</field>
+			<field name="url">http://119.9.27.148:8069/page/crm-training</field>
+		</record>
+		<!--Review/Checked/Y-->
+		<record model="ir.actions.act_url" id="sales_res_url">
+			<field name="name">Sales Resources</field>
+			<field name="url">http://119.9.27.148:8069/partners/grade/sales-4</field>
+		</record>
+		<!--Review/Checked-->
+	<!-- Marketing-->
+		<record model="ir.actions.act_url" id="mark_systrn_url">
+			<field name="name">Marketing System</field>
+			<field name="url">http://119.9.27.148:8069/page/marketing</field>
+		</record>
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="mark_comm_url">
+			<field name="name">Marketing Community</field>
+			<field name="url">http://119.9.27.148:8069/partners/grade/marketing-3</field>
+		</record>
+		<!--Review/Checked-->
+	<!--Team Building-->
+	<record model="ir.actions.act_url" id="team_systrn_url">
+			<field name="name">E Classes</field>
+			<field name="url">http://119.9.27.148:8069/page/sorry-this-is-under-development-still</field>
+		</record>
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="team_comm_url">
+			<field name="name">Recruitment</field>
+			<field name="url">http://119.9.27.148:8069/page/sorry-this-is-under-development-still</field>
+		</record>
+<!--Business Improvement-->
+	<record model="ir.actions.act_url" id="bizimp_comm_url">
+			<field name="name">TAG Odoo Consultants</field>
+			<field name="url">http://119.9.27.148:8069/partners/grade/odoo-business-management-systems-12</field>
+		</record>
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="odoo_apps_url">
+			<field name="name">Odoo Apps</field>
+			<field name="url">https://www.odoo.com/apps</field>
+		</record>
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="odoo_techdev_url">
+			<field name="name">Odoo Tech Development</field>
+			<field name="url">https://www.odoo.com/documentation/8.0/</field>
+		</record>
+		<!--Review/Checked-->
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="tagodoo_forum_url">
+			<field name="name">TAG Odoo Forum</field>
+			<field name="url">https://www.odoo.com/forum/help-1</field>
+		</record>
+		<!--Review/Checked-->
+		<!--Review/Checked-->
+		<record model="ir.actions.act_url" id="tag_support_forum">
+		    <field name="name">TAG Support Forum</field>
+		    <field name="url">http://www.smallbiz.community/forum/help-1</field>
+		</record>
+	<!-- Menu Items, by not having a parent adds to the top of screen Menu Bar -->  
+        <menuitem id="tag_help00" name="TAG Help" sequence="120"/>
+		<menuitem id="tag_help01" name="Support Type" parent="tag_help00" action="action_tag_help" sequence="00"/>
+		<menuitem id="tag_help01a" name="With..." parent="tag_help01" action="action_tag_help" sequence = "10"/>
+		<!--Sales-->
+        <menuitem id="tag_help02a" name="Sales Help" parent="tag_help00" sequence = "200"/>
+		<menuitem id="tag_help02c" name="System Training" parent="tag_help02a" action= "sales_systrn_url" sequence="230" />
+		<menuitem id="tag_help02d" name="Add Resources" parent="tag_help02a" action="sales_res_url" sequence = "240"/>
+		<!--Marketing-->
+		<menuitem id="tag_help03a" name="Marketing Help" parent="tag_help00" action="action_tag_help" sequence = "300"/>
+		<menuitem id="tag_help03c" name="System Training" parent="tag_help03a" action="mark_systrn_url" sequence="320"/>
+		<menuitem id="tag_help03d" name="Add Resources" parent="tag_help03a" action="mark_comm_url" sequence = "330"/>
+		<!--Team Building-->
+		<menuitem id="tag_help04a" name="Team Building" parent="tag_help00" action="action_tag_help" sequence = "400"/>
+		<menuitem id="tag_help04c" name="E Classes" parent="tag_help04a" action="team_systrn_url" sequence="420"/>
+		<menuitem id="tag_help04d" name="Add Resources" parent="tag_help04a" action="team_comm_url" sequence = "430"/>
+		<!--TAG Support-->
+		<menuitem id="tag_help05a" name="TAG Support" parent="tag_help00" action="action_tag_help" sequence = "500"/>
+		<menuitem id="tag_help05b" name="TAG Support Forum" parent="tag_help05a" action="tag_support_forum" sequence = "510"/>
+		<!--Business Improvement-->
+		<menuitem id="tag_help06a" name="Business Improvement" parent="tag_help00" action="action_tag_help" sequence = "600"/>
+		<menuitem id="tag_help06c" name="Add Resources" parent="tag_help06a" action="bizimp_comm_url" sequence="610"/>
+		<menuitem id="tag_help06d" name="System Developers" parent="tag_help06a" action="bizimp_comm_url" sequence="620"/>
+		<menuitem id="tag_help06e" name="Odoo Apps" parent="tag_help06a" action="odoo_apps_url" sequence = "630"/>
+		<menuitem id="tag_help06f" name="Odoo Tech Manual" parent="tag_help06a" action="odoo_techdev_url" sequence = "640"/>
+		<menuitem id="tag_help06g" name="Odoo Forum" parent="tag_help06a" action="tagodoo_forum_url" sequence = "650"/>
+	</data>
+</openerp>

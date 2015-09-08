@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="legacy_projects_project">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/group/group[2]/field[@name='title']" position="after">
+	        <field name="TagCust2" />
+            </xpath>
+            <xpath expr="/form/sheet/group/group[1]/field[@name='website']" position="after">
+	    	<field name="TagCust1" />
+            </xpath>
+            <notebook position="inside">
+	        <page string="Client Detail">
+	            <group>
+	                <group>
+						<field name="TagCust3" />
+						<field name="TagCust4" />
+						<field name="TagCust5" />
+						<field name="TagCust6" />
+						<field name="TagCust7" />
+						<field name="TagCust8" />
+			    
+	                </group>
+	                <group>
+	                    <field name="TagCust9" />
+						<field name="TagCust10" />
+						<field name="TagCust11" />
+						<field name="TagCust12" />
+						<field name="TagCust13" />			
+	                </group>
+	            </group>
+	        </page>
+	        <page string="Equipment Detail">
+	            <h5>Category 1</h5>
+	            <group>
+	                <group>
+						<field name="TagCust14" />
+						<field name="TagCust15" />
+						<field name="TagCust16" />
+						<field name="TagCust17" />
+						<field name="TagCust18" />
+			</group>
+			<group>
+						<field name="TagCust19" />
+						<field name="TagCust20" />
+						<field name="TagCust21" />
+						<field name="TagCust22" />
+						<field name="TagCust23" />
+			</group>
+		    </group>
+		    <h5>Category 2</h5>
+		    <group>
+		        <group>
+						<field name="TagCust24" />
+						<field name="TagCust25" />
+						<field name="TagCust26" />
+						<field name="TagCust27" />
+						<field name="TagCust28" />
+		    	</group>
+		        <group>
+
+						<field name="TagCust30" />
+						<field name="TagCust31" />
+						<field name="TagCust32" />
+						<field name="TagCust33" />
+		    	</group>
+		    </group>
+	        </page>
+            </notebook>        
+        </field>
+    </record>
+  </data>
+</openerp>

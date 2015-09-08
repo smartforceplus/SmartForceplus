@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+      
+      <record model="ir.ui.view" id="mass_mailing.view_mail_mass_mailing_form">
+          <field name="name">Tag Mass Email</field>
+          <field name="model">mail.mass_mailing</field>
+	  <field name="arch" type="xml">
+<form string="Mass Mailing">
+                    <header>
+                        <button name="action_test_mailing" type="object" class="oe_highlight" string="Test Mailing" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('body_html', '=', False)]}"/>
+                        <button name="action_test_mailing" type="object" attrs="{'invisible': ['&amp;', ('state', '=', 'draft'), ('body_html', '!=', False)]}" string="Test Mailing"/>
+                        <button name="send_mail" type="object" attrs="{'invisible': ['|', ('state', '=', 'done'), ('body_html', '=', False)]}" class="oe_highlight" string="Send to All"/>
+                        <button name="send_mail" type="object" attrs="{'invisible': ['&amp;', ('state', '!=', 'done'), ('body_html', '!=', False)]}" string="Send to All"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <div class="oe_form_box_info oe_text_center" attrs="{'invisible': [('scheduled', '=', 0)]}">
+                        <p><strong>
+                            <field name="scheduled" class="oe_inline"/>
+                            emails are in queue and will be sent soon.
+                        </strong></p>
+                    </div>
+                    <sheet>
+                        <div class="oe_button_box pull-right" attrs="{'invisible': [('state', 'in', ('draft','test'))]}">
+                            <button name="270" type="action" class="oe_stat_button">
+                                <field name="received_ratio" string="Received" widget="percentpie"/>
+                            </button>
+                            <button name="270" type="action" class="oe_stat_button">
+                                <field name="opened_ratio" string="Opened" widget="percentpie"/>
+                            </button>
+                            <button name="270" type="action" class="oe_stat_button">
+                                <field name="replied_ratio" string="Replied" widget="percentpie"/>
+                            </button>
+                            <button name="270" type="action" class="oe_stat_button oe_inline">
+                                <field name="opened_daily" string="Opened Daily" widget="barchart"/>
+                            </button>
+                            <button name="270" type="action" class="oe_stat_button oe_inline">
+                                <field name="replied_daily" string="Replied Daily" widget="barchart"/>
+                            </button>
+                        </div>
+                        <button name="270" type="action" icon="fa-envelope-o" class="oe_stat_button" attrs="{'invisible': [('total', '=', 0)]}">
+                            <field name="total" string="Emails" widget="statinfo"/>
+                        </button>
+
+                        <group>
+                            <field name="email_from"/>
+                            <field name="name"/>
+                            <label for="mailing_model" string="Recipients"/>
+                            <div>
+                                <field name="mailing_model" widget="radio" style="margin-bottom: 8px" on_change="on_change_model_and_list(mailing_model, contact_list_ids)"/>
+
+                                <field name="mailing_domain" widget="char_domain" placeholder="Select recipients" options="{'model_field': 'mailing_model'}"/>
+
+                                <div attrs="{'invisible': [('mailing_model', '&lt;&gt;', 'mail.mass_mailing.contact')]}">
+                                    <label for="contact_list_ids" string="Select mailing lists:" class="oe_edit_only"/>
+                                    <field name="contact_list_ids" widget="many2many_tags" placeholder="Select mailing lists..." class="oe_inline" on_change="on_change_model_and_list(mailing_model, contact_list_ids)"/>
+                                </div>
+                            </div>
+                        </group>
+                        <notebook>
+                            <page string="Mail Body">
+                                <!--<label for="subject"/>
+                                <h2 style="display: inline-block;"><field name="subject" placeholder="Subject (placeholders may be used here)"/></h2>-->
+                                <field name="body_html"/>
+                                <field name="attachment_ids" widget="many2many_binary"/>
+                            </page>
+                            <page string="Options">
+                                <group>
+                                    <group string="Mailing">
+                                        <label for="reply_to"/>
+                                        <div>
+                                            <p class="alert alert-danger" attrs="{'invisible': ['|', ('reply_to_mode', '!=', 'thread'), ('mailing_model', 'not in', ['mail.mass_mailing.contact', 'res.partner'])]}">
+                                                This option is not available for the recipients you selected.
+                                                Please use a specific reply-to email address.
+                                            </p>
+                                            <field name="reply_to_mode" widget="radio"/>
+                                            <field name="reply_to" style="margin-left: 16px;" attrs="{'required': [('reply_to_mode', '=', 'email')]}"/>
+                                        </div>
+                                        <field name="create_date" readonly="1"/>
+                                        <field name="sent_date" readonly="1"/>
+                                    </group>
+                                    <group string="Campaign">
+                                        <field name="mass_mailing_campaign_id" groups="mass_mailing.group_mass_mailing_campaign"/>
+                                        <label for="contact_ab_pc"/>
+                                        <div>
+                                            <field name="contact_ab_pc" class="oe_inline"/> %
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+<page string="Advanced Settings">
+                                <group>
+                                
+                                    <field name="lang"/>
+                                    <field name="mail_server_id"/>
+                                    <field name="auto_delete"/>
+                                    <field name="report_template"/>
+                                    <field name="report_name" class="oe_inline" attrs="{'invisible':[('report_template','=',False)]}"/>
+                                
+                                </group>
+                            </page>
+<page string="Dynamic Placeholder Generator">
+                                <group>
+                                    <field name="model_object_field" domain="[('model_id','=',mailing_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" on_change="onchange_sub_model_object_value_field(model_object_field)"/>
+                                    <field name="sub_object" readonly="1"/>
+                                    <field name="sub_model_object_field" domain="[('model_id','=',sub_object),('ttype','!=','one2many'),('ttype','!=','many2many')]" attrs="{'readonly':[('sub_object','=',False)],'required':[('sub_object','!=',False)]}" on_change="onchange_sub_model_object_value_field(model_object_field,sub_model_object_field)"/>
+                                    <field name="null_value" on_change="onchange_sub_model_object_value_field(model_object_field,sub_model_object_field,null_value)"/>
+                                    <field name="copyvalue"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>	      
+	  </field>
+      </record>
+      
+  </data>
+</openerp>

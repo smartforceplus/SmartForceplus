@@ -1,0 +1,111 @@
+<openerp>
+    <data noupdate="0">
+
+        <record id="mt_lead_itl_notify" model="mail.message.subtype">
+            <field name="name">Lead Notification</field>
+            <field name="res_model">notification.lead</field>
+            <field name="default" eval="False"/>
+            <field name="hidden" eval="True"/>
+            <field name="description">Overdue List</field>
+        </record>
+
+
+    	<record id="crm_lead_overdue_notification" model="email.template">
+            <field name="name">Lead notification deadline</field>
+            <field name="auto_delete" eval="True"/>      
+            <field name="body_html"><![CDATA[
+                <table border="1" style="border-color:rgba(150, 150, 220, 0.3);border-collapse: collapse;" width="100%">
+					<tbody>
+						<tr style="background-color:#b163a3;font-color:#ffffff">
+							<td colspan="2" width="80%" style="padding:2%;text-align: center;border-bottom:0px;">
+								<strong><big><font color="#ffffff"><a style="color:#ffffff;">Overpassed and Today Leads</a></font></big></strong>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border-top:0px;border-bottom:0px;">
+
+					<table border="1" style="border-color:rgba(150, 150, 220, 0.3);border-collapse: collapse;" width="100%">
+					<tbody>
+
+					<tr>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Opportunity</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Customer</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Next Action Date</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Action Name</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Delay Days</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Responsible</strong>
+					</td>
+					<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+					<strong>Stage</strong>
+					</td>
+					</tr>
+					% for o in object.lead_ids:
+						<tr>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+							<a href="${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}&view_type=form&model=crm.lead&action=${ctx['action']}"><i>${o.name}</i></a>&nbsp;&nbsp;&nbsp;
+							<a href="${ctx['base_url']}/web?${ctx['dbname']}#id=${o.id}&view_type=form&model=crm.lead&action=${ctx['action']}" style="background-color: #5cb85c;padding: 2px 6px 2px 6px;border-top: 1px solid #4cae4c;border-right: 1px solid #4cae4c;border-bottom: 1px solid #4cae4c;border-left: 1px solid #4cae4c;text-decoration:none;border-radius: 5px;"><span style="color:#FFFFFF;">&gt;</span></a>
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						% if o.partner_id
+							${o.partner_id.name}
+						% endif
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						${o.date_action}
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						% if o.title_action
+							${o.title_action}
+						% endif
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						${(ctx['datetime'].now()-ctx['datetime'].strptime(o.date_action,'%Y-%m-%d')).days}
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						${o.user_id.name}
+						</td>
+						<td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+						${o.stage_id.name}
+						</td>
+						</tr>
+					% endfor
+					</tbody>
+					</table>
+
+					</td>
+					</tr>
+
+						</tbody>
+				</table>
+                ]]>
+                </field>
+        </record>            
+    </data>
+
+
+    <data>
+    	<record model="ir.cron" id="notify_crm_lead_dateaction">
+           <field name="name">Notify users about overdue leads</field>
+           <field name="interval_number">1</field>
+           <field name="interval_type">days</field>
+           <field name="numbercall">-1</field>
+           <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 7:00:00')" />
+           <field name="model" eval="'notification.lead'"/>
+           <field name="function" eval="'cron_notify'"/>
+           <field name="args" eval="'()'"/>
+        </record>
+    </data>
+
+
+</openerp>

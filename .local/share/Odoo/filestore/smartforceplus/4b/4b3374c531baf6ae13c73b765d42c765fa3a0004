@@ -1,0 +1,50 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sat, 29 Aug 2015 14:30:06 -0500
+Received: from mail-io0-f178.google.com ([209.85.223.178]:33174)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZVlpG-0004QY-M7
+ for task@smartforceplus.com; Sat, 29 Aug 2015 14:30:06 -0500
+Received: by iods203 with SMTP id s203so123961087iod.0
+ for <task@smartforceplus.com>; Sat, 29 Aug 2015 12:30:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=SRr4vifVWB1wTF1vvy2AkBM9qkCCLkV0pZMP6abS0Qk=;
+ b=ththwxdUb/jOlwFFfex9lMI3wSAeBhg8b+ikk+/UwFrgYcS8v2ObexIo5Z/It94241
+ ZFCB/lEY8G4MqzBzLHR8Pm/FsxqNoGoZUKMUO1pCv5TLCRezIKYaqsDNiDiFWNwCRYHX
+ kjda2A82QRF6gkGvZNtFSa9FuXcrfHEnI33TJ0G3IN4nYFXyVPEIJ8gxv3/676SsuhrJ
+ Wf2wTC1erkc4aJdJsvQTUGD/oeTg1vd+FJ+LKk6gRjERfM2PCe3V6V2VuolQ4y3Hboaa
+ i2wrF0YmhXJ0QDJEoYe9hnWlhZ+get6U9llX4Pc7sg9qzi2ar8/SAMGj+o9zED7nYTz4
+ Jdsg==
+MIME-Version: 1.0
+X-Received: by 10.107.8.216 with SMTP id h85mr11844022ioi.89.1440733876100;
+ Thu, 27 Aug 2015 20:51:16 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Thu, 27 Aug 2015 20:51:15 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Thu, 27 Aug 2015 20:51:15 -0700 (PDT)
+Date: Fri, 28 Aug 2015 11:51:15 +0800
+X-Google-Sender-Auth: hz1i1ahSEMTFtosYs5nI3YYvkgc
+Message-ID: <CAJMZX9Rg0puzficP200zyxdZSkRGqo+m7oA5yq7q4Uf6-dDxjA@mail.gmail.com>
+Subject: Lara. Get from ag gmail keith rohdes video marketing questionaire
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=001a113f89fae6a1a8051e56fe18
+
+--001a113f89fae6a1a8051e56fe18
+Content-Type: text/plain; charset=UTF-8
+
+Then make a page on community site that has the same content and link it
+the marketing mindmap...
+
+Hopefully we have a marketing sub map?.
+
+Sub map of system
+
+--001a113f89fae6a1a8051e56fe18
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr">Then make a page on community site that has the same content and link it the marketing mindmap...</p>
+<p dir="ltr">Hopefully we have a marketing sub map?.</p>
+<p dir="ltr">Sub map of system</p>
+
+--001a113f89fae6a1a8051e56fe18--

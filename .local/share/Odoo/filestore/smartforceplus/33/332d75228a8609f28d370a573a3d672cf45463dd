@@ -1,0 +1,44 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sat, 29 Aug 2015 18:19:58 -0500
+Received: from mail-ig0-f182.google.com ([209.85.213.182]:36334)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZVpPi-0007Fr-6x
+ for task@smartforceplus.com; Sat, 29 Aug 2015 18:19:58 -0500
+Received: by igboj15 with SMTP id oj15so759034igb.1
+ for <task@smartforceplus.com>; Sat, 29 Aug 2015 16:19:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:cc:content-type;
+ bh=fOsJlJJ5rJM35hCnOdUXuGJ3C6MUe8o/ENS0/Sf6fb0=;
+ b=Drms201AJFxxj07oIV9EXx8HAfc3YbvCIDl6mZfKTJBv3LzL+sW4/xaekMNqiOzmEZ
+ eo5PGvZn86b4PiPlYy82Irgtwr5Y5T6sOTEoiqkERtuzU5CcS/skcA1fD0ZsROpfcMKS
+ uCvo6j13+V9dnoNtC5h2kgKK063e+8YMpgv6khEEUiJH+/fCv5iKcjR7gRjqppcPO9vT
+ 1nHITAYou7sUTuvGD+OAP+wMK6fHCKRSv1WIfDg/P0cTzuE3QEzdyFRdLEMNuIHgDu5s
+ ie3YqGBQne16npLUwx5CQylKjdP1G4RS0lx+nlSc9UBThOOmyxglxmsnTjnNhkwbr0RL
+ teeA==
+MIME-Version: 1.0
+X-Received: by 10.50.13.100 with SMTP id g4mr1473401igc.62.1440726870290; Thu,
+ 27 Aug 2015 18:54:30 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Thu, 27 Aug 2015 18:54:30 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Thu, 27 Aug 2015 18:54:30 -0700 (PDT)
+Date: Fri, 28 Aug 2015 09:54:30 +0800
+X-Google-Sender-Auth: DhYtADKlvEpgKOWTtVpROlsw7eE
+Message-ID: <CAJMZX9T8nw9P0xkCKS_sXcv5au9yfik1DCFaynJaM28t2QVNdg@mail.gmail.com>
+Subject: Create Tag Lifting Project in Smart Force Plus
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Cc: Martin Purcell <martin@subdivisionandstrata.com.au>
+Content-Type: multipart/alternative; boundary=089e013c6614527859051e555dd3
+
+--089e013c6614527859051e555dd3
+Content-Type: text/plain; charset=UTF-8
+
+
+
+--089e013c6614527859051e555dd3
+Content-Type: text/html; charset=UTF-8
+
+
+
+--089e013c6614527859051e555dd3--

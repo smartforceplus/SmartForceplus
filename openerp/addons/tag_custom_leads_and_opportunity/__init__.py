@@ -1,0 +1,2 @@
+import tag_custom_partner
+import tag_custom_opportunity

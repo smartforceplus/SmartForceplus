@@ -1,0 +1,2 @@
+"id","code_digits","bank_account_view_id/id","visible","complete_tax_set","property_account_expense_categ/id","property_account_income_categ/id","name","property_account_payable/id","property_account_receivable/id","account_root_id/id","tax_code_root_id/id"
+"l10n_au_manufacturing.l10n_au_manufacturing","6","__export__.account_account_5","True","True","__export__.account_account_85","__export__.account_account_74","Australia  Accounting - OurMainMan","__export__.account_account_45","__export__.account_account_12","__export__.account_account_1","l10n_au_manufacturing.0"

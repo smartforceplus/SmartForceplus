@@ -1,0 +1,43 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Mon, 31 Aug 2015 01:41:53 -0500
+Received: from mail-ig0-f181.google.com ([209.85.213.181]:36275)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZWImv-000EAI-Oz
+ for task@smartforceplus.com; Mon, 31 Aug 2015 01:41:53 -0500
+Received: by igboj15 with SMTP id oj15so18345660igb.1
+ for <task@smartforceplus.com>; Sun, 30 Aug 2015 23:41:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=zG8q3zuQejK7Mprt3QeryjD3E80+RDga0YHNoYMhU9I=;
+ b=gz9iDxBawp5r+9wGlpxf0wedkK7d8k5N9n7QJr0MCzSyNa1n+CNz56hoX1cd/2yoUt
+ AZ1euPCzTYMsqVnx+EIPyMEhZFKWNETxouCmcTZjgQc6qEH2LCmuD/mJwIfJwtsrDrVV
+ OmNoE3V8Py5evd3cTSY1BQnatmm+IXNzpQW77Te5XnYxlO5wshCOWs5FHjqIsPkeN7p5
+ E62LK6BPMli121CUqwFn2kpaOJR2/hw58ZOGswfkgeuhzbJ9bfa0K21OLKBf4QyeF4ND
+ tgbtlmG5TKIIwQe0de1BH97zzSlZ56C2FlOfW0IMnV98/BYOUXiS+hma3e2IRgJQfgTf
+ pjiw==
+MIME-Version: 1.0
+X-Received: by 10.50.138.72 with SMTP id qo8mr963954igb.92.1441003311920; Sun,
+ 30 Aug 2015 23:41:51 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 23:41:51 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 23:41:51 -0700 (PDT)
+Date: Mon, 31 Aug 2015 14:41:51 +0800
+X-Google-Sender-Auth: cpv4uM0DT9ehWU3_8E5ZdxnULI8
+Message-ID: <CAJMZX9QzUkeE95cP-5H+-sWZN07zJaMn3eks-1VBhp7xVhXPHw@mail.gmail.com>
+Subject: Pinakin Nayi Odoo: How to Add custom Widget in your open ERP module
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=001a1134c79286fd69051e95bae9
+
+--001a1134c79286fd69051e95bae9
+Content-Type: text/plain; charset=UTF-8
+
+http://pinakinnayi.blogspot.in/2012/04/how-to-add-custom-widget-in-your-open.html?m=1
+
+--001a1134c79286fd69051e95bae9
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="http://pinakinnayi.blogspot.in/2012/04/how-to-add-custom-widget-in-your-open.html?m=1">http://pinakinnayi.blogspot.in/2012/04/how-to-add-custom-widget-in-your-open.html?m=1</a></p>
+
+--001a1134c79286fd69051e95bae9--

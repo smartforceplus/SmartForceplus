@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_account_fstr_tax_code_wizard_form" model="ir.ui.view">
+            <field name="name">account_fstr_tax_code.wizard.form</field>
+            <field name="model">account_fstr_tax_code.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Account charts">
+                    
+                        <field name="fiscalyear" on_change="onchange_fiscalyear(fiscalyear)" widget="selection" colspan="4" required="1"/>
+                        <field name="target_move" colspan="4"/>
+						
+						<separator string="Period" colspan="4"/>
+						<field name="period_from" widget="selection"/>	                        							
+						<field name="period_to" widget="selection"/>						                                                												
+                        <separator colspan="4"/>
+                        <field name="root_node" domain="[('printable','=','1')]" colspan="4"/>
+                        <field name="hide_zero" colspan="4" invisible="1"/>
+						<field name="send_by_email" colspan="4" invisible="1"/>
+						<field name="subject" attrs="{'invisible':[('send_by_email','=',False)]}" colspan="4"/>
+						<field name="body" attrs="{'invisible':[('send_by_email','=',False)]}" colspan="4"/>
+						<field name="user_ids" attrs="{'invisible':[('send_by_email','=',False)]}" colspan="4"/>
+						
+						<!--<group colspan="4">							
+							<notebook>
+								<page string="Department Filter">
+									<separator orientation="horizontal" string="Departments:" colspan="4"/>
+									<field name="analytic_account_ids" colspan="4" nolabel="1">
+										<tree editable="top">
+											<field name="name"/>
+											<field name="code"/>
+										</tree>
+									</field>	
+								</page>							
+							</notebook>			
+						</group>-->
+						
+                    
+                    <separator string="" colspan="4"/>
+                    <group colspan="4" col="6">
+                        <button icon="gtk-cancel" special="cancel" string="Cancel"/>                        
+                        <button icon="gtk-print" string="Print" name="print_template" type="object" attrs="{'invisible':[('send_by_email','=',True)]}"/>
+						<button icon="terp-gtk-go-back-rtl" string="Print and Send Email" name="send_email" type="object" attrs="{'invisible':[('send_by_email','=',False)]}"/>						
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_account_fstr_tax_code_wizard" model="ir.actions.act_window">
+            <field name="name">Temlate Print/Preview</field>
+            <field name="view_id" ref="view_account_fstr_tax_code_wizard_form"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">account_fstr_tax_code.wizard</field>
+            <field name="target">new</field>
+        </record>
+
+        <report id="account_fstr_tax_code_report" string="Print Template" model="account_fstr_tax_code.category" name="account_fstr_tax_code.report" rml="account_tax_code_ept/reports/account_fstr_report.rml"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,83 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sun, 06 Sep 2015 02:46:23 -0500
+Received: from mail-ig0-f179.google.com ([209.85.213.179]:37096)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZYUed-000Lk0-HW
+ for task@smartforceplus.com; Sun, 06 Sep 2015 02:46:23 -0500
+Received: by igbni9 with SMTP id ni9so39914314igb.0
+ for <task@smartforceplus.com>; Sun, 06 Sep 2015 00:46:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:cc:content-type;
+ bh=Ft7r0LUKAgfqmXF8B7mnDF+OrR3WMS4tYU1Qyr3HGRk=;
+ b=T5rlDGBrPE9QtHyEj7FyYlWz7W3CsQt7C5UyKg3OsUriAvjAmCTez2nbgsaKmpXF7l
+ OrPzMChi2ALiRPQBXiK0LsQXqvh1zIKuDJpO1QTs9evUFK7yomsnzK/l+CkCWz0SzpKI
+ bzJIAJyU4Y/qFZO2PaGy3fOb096B018e8mtrvFeX04LeV+aIK+J8AwaU357ezr2+fQHU
+ Rp2b4v8t1WgqkUq95apKV5xJjFX2rxg9yZCe96QyfZI+v/uAs6G1zkGe7a5OIfDUk01X
+ B+hFWAcnBqzfOB33Hhu+7uVw1w25sVbGLo8mjvFKe28zHdgDj6fH6b/Q8BIJiJ5tMN3V
+ vTmw==
+MIME-Version: 1.0
+X-Received: by 10.50.79.129 with SMTP id j1mr19853296igx.63.1441525581521;
+ Sun, 06 Sep 2015 00:46:21 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 6 Sep 2015 00:46:21 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 6 Sep 2015 00:46:21 -0700 (PDT)
+Date: Sun, 6 Sep 2015 17:46:21 +1000
+X-Google-Sender-Auth: 9WNsmvBjphif1PdCarsp3fZ8h40
+Message-ID: <CAJMZX9TWhrFAOMzaVENC5waQnfBOxRxG88Foo2euG2Hq_J1Vvg@mail.gmail.com>
+Subject: Question please re TAG Lifting
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: Hamid Naeem <hamidnk@gmail.com>
+Cc: lara@tagsbm.com, task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=089e011609fc38acfa051f0f5476
+
+--089e011609fc38acfa051f0f5476
+Content-Type: text/plain; charset=UTF-8
+
+Hi Hamid.
+
+I have an old domain with a bad website.
+
+Domain is www.taglifting.com.au
+
+It is currently in Wordpress.
+
+We also have other seperate sites like www.taglifting.com.au/inspections
+again this is wordpress
+
+My question is;
+
+can we change www.taglifting.com.au dns to go to an odoo instance we
+currently have (ie replace www.tagbrm.com with www.taglifting.com.au ) yet
+not disrupt the external wordpress sites like
+www.taglifting.com.au/inspections
+
+I await your answer on this and is it a relatively simple task for your
+skills?
+
+Anthony
+
+--089e011609fc38acfa051f0f5476
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">Hi Hamid.</p>
+<p dir=3D"ltr">I have an old domain with a bad website.</p>
+<p dir=3D"ltr">Domain is <a href=3D"http://www.taglifting.com.au">www.tagli=
+fting.com.au</a></p>
+<p dir=3D"ltr">It is currently in Wordpress.</p>
+<p dir=3D"ltr">We also have other seperate sites like <a href=3D"http://www=
+.taglifting.com.au/inspections">www.taglifting.com.au/inspections</a> again=
+ this is wordpress</p>
+<p dir=3D"ltr">My question is;</p>
+<p dir=3D"ltr"> can we change <a href=3D"http://www.taglifting.com.au">www.=
+taglifting.com.au</a> dns to go to an odoo instance we currently have (ie r=
+eplace <a href=3D"http://www.tagbrm.com">www.tagbrm.com</a> with <a href=3D=
+"http://www.taglifting.com.au">www.taglifting.com.au</a> ) yet not disrupt =
+the external wordpress sites like <a href=3D"http://www.taglifting.com.au/i=
+nspections">www.taglifting.com.au/inspections</a> </p>
+<p dir=3D"ltr">I await your answer on this and is it a relatively simple ta=
+sk for your skills?</p>
+<p dir=3D"ltr">Anthony<br></p>
+
+--089e011609fc38acfa051f0f5476--

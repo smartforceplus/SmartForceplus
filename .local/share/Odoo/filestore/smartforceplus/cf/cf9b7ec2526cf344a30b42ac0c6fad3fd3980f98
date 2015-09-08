@@ -1,0 +1,41 @@
+Return-path: <lance-1@innovative-emarketing.com>
+Envelope-to: info@smartforceplus.com
+Delivery-date: Sat, 05 Sep 2015 07:59:41 -0500
+Received: from smtp1.servage.net ([77.232.76.11]:36510)
+ by gator3236.hostgator.com with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
+ (Exim 4.85) (envelope-from <lance-1@innovative-emarketing.com>)
+ id 1ZYD4G-0000jL-Vi
+ for info@smartforceplus.com; Sat, 05 Sep 2015 07:59:41 -0500
+Received: from [192.168.1.6] (CPE-1-121-177-77.qwl9.woo.bigpond.net.au
+ [1.121.177.77])
+ (using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+ (No client certificate requested)
+ by smtp1.servage.net (Postfix) with ESMTPSA id AABFF32145
+ for <info@smartforceplus.com>; Sat,  5 Sep 2015 13:05:08 +0000 (UTC)
+Reply-To: lance-1@innovative-emarketing.com
+To: info@smartforceplus.com
+From: Lance <lance-1@innovative-emarketing.com>
+Subject: Odoo Au Accounts
+X-Enigmail-Draft-Status: N1110
+Organization: Innovative eMarketing Pty Ltd
+Message-ID: <55EAE738.50700@innovative-emarketing.com>
+Disposition-Notification-To: Lance <lance-1@innovative-emarketing.com>
+Date: Sat, 5 Sep 2015 22:59:36 +1000
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101
+ Thunderbird/38.2.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+To whom it may concern,
+I came across your site http://www.smallbiz.community and read that you
+had an Australian Accounts module made for Odoo.
+
+Currently I'm in a start-up process and looking at implementing Odoo
+possibly on a home server to start with, however, it needs to be set up
+for Australian accounts and Australian Payroll.
+
+Is you module available and if so, at what price?
+
+Regards,
+Lance Bleakley

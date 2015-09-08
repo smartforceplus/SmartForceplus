@@ -1,0 +1,43 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sun, 30 Aug 2015 02:32:04 -0500
+Received: from mail-ig0-f170.google.com ([209.85.213.170]:33753)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZVx5w-000GKO-BD
+ for task@smartforceplus.com; Sun, 30 Aug 2015 02:32:04 -0500
+Received: by igbuu8 with SMTP id uu8so30413498igb.0
+ for <task@smartforceplus.com>; Sun, 30 Aug 2015 00:32:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=nVjmuON866wgwTipifhxa71bHTyD4UFWg/py/dNdnYA=;
+ b=lQGdxuGwA8x9UpBx2pPRYHLCVfk9mp1PHRrt9AP1NM3sINGyiOMhgfafhVe8XlFVBj
+ 0osZsbZew5D5MU955k0dMgAOrLHRaH1lOe6C6lpusdyOKHMMFA9uRCeoeJMzJnimYL6Y
+ u0sm9zYwIiL1pvY7oW1+z/XPEElN+tiptsKK+MCK4SKlQVstZAAz1hGLxBOvirPDiY9L
+ Ds7XmQyu5IiLcb8diHYDCySQHKo9KFw9BbdtjQweg2LweeH/hNA8he1vC9IWvh0NVUCS
+ pqXP7RIENMdjs3ZZl/GAY+n4f4XJFI8uHC/uDik75Zr//6Vc4+pPJH/TfNf9DwgAogPX
+ 7f+w==
+MIME-Version: 1.0
+X-Received: by 10.50.67.179 with SMTP id o19mr9043430igt.63.1440919921574;
+ Sun, 30 Aug 2015 00:32:01 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 00:32:01 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 00:32:01 -0700 (PDT)
+Date: Sun, 30 Aug 2015 17:32:01 +1000
+X-Google-Sender-Auth: DvAI_sUbhy5k8ol3_BPTkPJboPU
+Message-ID: <CAJMZX9RZwUy9=YQzRFp+AEtH5SbuQTMPNDcNvjq0CswJ+7xeoA@mail.gmail.com>
+Subject: Frustrated: Marketing Automation - Activity with Condition | Odoo
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=047d7bdca6101349b0051e8250b0
+
+--047d7bdca6101349b0051e8250b0
+Content-Type: text/plain; charset=UTF-8
+
+https://www.odoo.com/forum/help-1/question/frustrated-marketing-automation-activity-with-condition-29835
+
+--047d7bdca6101349b0051e8250b0
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="https://www.odoo.com/forum/help-1/question/frustrated-marketing-automation-activity-with-condition-29835">https://www.odoo.com/forum/help-1/question/frustrated-marketing-automation-activity-with-condition-29835</a></p>
+
+--047d7bdca6101349b0051e8250b0--

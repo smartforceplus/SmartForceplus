@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="Systray.JobSearchWidget">
+        <li id="job_search_header">
+        	<input type="text" name="txtJobSearch" id="txtJobSearch" maxlength="35" style="font-size:12px;width:120px;margin-top:5px;" value="" > </input>  	
+        </li>
+    </t>
+
+</templates>

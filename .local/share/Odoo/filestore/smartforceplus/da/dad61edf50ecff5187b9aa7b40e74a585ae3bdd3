@@ -1,0 +1,43 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Sun, 30 Aug 2015 12:44:38 -0500
+Received: from mail-ig0-f182.google.com ([209.85.213.182]:37607)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZW6ek-0004XA-Er
+ for task@smartforceplus.com; Sun, 30 Aug 2015 12:44:38 -0500
+Received: by igui7 with SMTP id i7so42691670igu.0
+ for <task@smartforceplus.com>; Sun, 30 Aug 2015 10:44:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=TxmEqDyIqzcMbxIDIMAWBdhvnL02BrjPSGj4KNgDPJ0=;
+ b=guxgSxuzLMuyfHXqt9VjkC6cn8wF8U2Ue6dgWBS1P1S/bgrmVs+N/PvFh+uGB4vsBQ
+ Mdxez3O5/12tpNtdKYMNlX5vjVwUiSvp2An8Y4OAKlQyAk8FzVr/d8EtQxjwjlkyG31O
+ 6gM6SHTan+T6dFs8zvw3nVJuS3kg4W+VUW43dv9BZjw9Wph97B9Wf3Rpy5j5iD6KHog/
+ WnTmT9czDhnpwT5weprratqh411fvmU7I4UzsolCc2d78ltcHgSYOjmIHu6hcMfuE9C7
+ 5fQCEbJnf8Pnlv1q/uBOphHeIiKpQiywAGAd4+Xw4wFmjyQf8z0tYzPESgewGkRgSXAd
+ ZzMA==
+MIME-Version: 1.0
+X-Received: by 10.50.143.2 with SMTP id sa2mr11805413igb.92.1440956676483;
+ Sun, 30 Aug 2015 10:44:36 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 10:44:36 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Sun, 30 Aug 2015 10:44:36 -0700 (PDT)
+Date: Mon, 31 Aug 2015 03:44:36 +1000
+X-Google-Sender-Auth: aerm_VBgVIepczMZ-21W_NrFs88
+Message-ID: <CAJMZX9S_FFBHQcyzLv2Y_Z+vbMfMn=MbYKt19X1qTU7ekyt6vg@mail.gmail.com>
+Subject: Server Action
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=001a1134b594d6b30a051e8ade29
+
+--001a1134b594d6b30a051e8ade29
+Content-Type: text/plain; charset=UTF-8
+
+https://doc.odoo.com/v6.1/developer/06_actions.html
+
+--001a1134b594d6b30a051e8ade29
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="https://doc.odoo.com/v6.1/developer/06_actions.html">https://doc.odoo.com/v6.1/developer/06_actions.html</a></p>
+
+--001a1134b594d6b30a051e8ade29--

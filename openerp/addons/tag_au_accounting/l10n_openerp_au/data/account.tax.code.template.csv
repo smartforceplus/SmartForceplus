@@ -1,0 +1,28 @@
+id,name,code,parent_id:id,notprintable,sign
+AU GST,AU GST, ,,FALSE,
+GST Balance to Pay,GST Balance to Pay, ,AU GST,FALSE,1
+Input GST (1B),Input GST (1B), ,GST Balance to Pay,FALSE,-1
+Output GST (1A),Output GST (1A), ,GST Balance to Pay,FALSE,1
+Tax Bases,Tax Bases, ,AU GST,FALSE,
+Taxable Purchases Base,Taxable Purchases Base, ,Tax Bases,FALSE,
+G12,G12,,Taxable Purchases Base,,1
+G10,G10, ,G12,FALSE,1
+Taxable Purchases Capital Inc GST,Taxable Purchases Capital Inc GST, ,G10,FALSE,1.1
+G11,G11, ,G12,FALSE,1
+Taxable Purchases Non-Capital inc GST,Taxable Purchases Non-Capital inc GST, ,G11,FALSE,1.1
+Estimated purchases for private,Estimated purchases for private,G15,Taxable Purchases Base,FALSE,1
+G13 + G14 + G15 ,G13 + G14 + G15 ,G16,Taxable Purchases Base,FALSE,-1
+Taxable Purchases - Capital GST Free (G14 a),Taxable Purchases - Capital GST Free (G14 a), ,G13 + G14 + G15 ,FALSE,1
+Taxable Purchases Non Capital - Gst Free (G14 b),Taxable Purchases Non Capital - Gst Free (G14 b), ,G13 + G14 + G15 ,FALSE,1
+Taxable Purchases for input-taxed sales,Taxable Purchases for input-taxed sales, G13,G13 + G14 + G15 ,FALSE,1
+Adjustments (if applicable) ,Adjustments (if applicable) ,G18,Taxable Purchases Base,FALSE,1
+Taxable Sales Base (G1),Taxable Sales Base (G1), ,Tax Bases,FALSE,1
+Taxable Sales GST 10%,Taxable Sales GST 10%, ,Taxable Sales Base (G1),FALSE,1
+Taxable Sales other GST free,Taxable Sales other GST free, G3,Taxable Sales Base (G1),FALSE,1
+Taxable Sales Input-taxed 0%,Taxable Sales Input-taxed 0%, G4,Taxable Sales Base (G1),FALSE,1
+G2+G3+G4 ,G2+G3+G4 ,G5,Taxable Sales Base (G1),FALSE,-1
+Taxable Sales Exports 0% (G2),Taxable Sales Exports 0% (G2), G2,G2+G3+G4 ,FALSE,1
+Adjustments (if applicable) (G2),Adjustments (if applicable) ,G7,Taxable Sales Base (G1),FALSE,1
+GST Paid to custom ,GST Paid to custom ,  100 GST ,AU GST,FALSE,1
+N-T Purchase ,N-T Purchase ,  N-T-P ,AU GST,FALSE,1
+N-T Sales ,N-T Sales ,  N-T-S ,AU GST,FALSE,1

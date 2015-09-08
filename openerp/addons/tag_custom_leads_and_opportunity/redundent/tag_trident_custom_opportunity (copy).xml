@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+ <record id="base.view_opportunities_form" model="ir.ui.view">
+            <field name="name">Opportunities</field>
+            <field name="model">crm.lead</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Partners">
+                <sheet>
+                   
+                    <div class="oe_title oe_left" invisible="1">
+                        <div class="oe_edit_only">
+                           
+                        </div>
+                       
+                       
+
+                    </div>
+                    <div class="oe_right oe_button_box" name="buttons" invisible="1"> </div>
+
+                    <group invisible="1">
+                        <group>
+                           
+
+                            <label for="street" string="Address"/>
+                            <div>
+                                <div class="oe_edit_only">
+                             
+                                </div>
+                                <button name="open_parent" type="object" string="(edit company address)" class="oe_link oe_edit_only"
+                                        />
+                                <field name="street" placeholder="Street..."  />
+                                <field name="street2"  />
+                                <div class="address_format">
+                                    <field name="city" placeholder="City" style="width: 40%%" />
+                                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}' on_change="onchange_state(state_id)" />
+                                    <field name="zip" placeholder="ZIP" style="width: 20%%" />
+                                </div>
+                                <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True, "no_create": True}'/>
+                            </div>
+                            <field name="website" widget="url" placeholder="e.g. www.odoo.com"/>
+                            <!--<field name="website_n" widget="url" placeholder="e.g. www.odoo.com"/>-->
+                        </group>
+                        <group>
+                            <field name="function" placeholder="e.g. Sales Director"
+                                />
+                            <field name="phone" placeholder="e.g. +32.81.81.37.00"/>
+                            <field name="mobile"/>
+                            <field name="fax"/>
+                            <field name="email_from" widget="email" />
+                            <field name="title" options='{"no_open": True}'/>
+                        </group>
+                    </group>
+
+                    <notebook colspan="4">
+                        <page string="Contacts"  autofocus="autofocus">
+                           
+                              
+                        </page>
+                        <page name='internal_notes' string="Internal Notes">
+                           
+                        </page>
+                        <page name='sales_purchases' string="Sales &amp; Purchases">
+                            <group>
+                                <group>
+                                    <field name="user_id" 
+                                        context="{'default_groups_ref': ['base.group_partner_manager']}"/>
+                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                </group>
+                                <group>
+
+
+                                </group>
+                                <group>
+                                    <field name="ref"/>
+
+
+                                </group>
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                </form>
+            </field>
+        </record>
+    <record model="ir.ui.view" id="tag_lead">
+        <field name="name">Opportunities</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+             <xpath expr="/form/header/button[@name='case_mark_lost']" position="after">
+                <button name="%(action_opportunity_customer)d" string="Convert to Customer" type="action" class="oe_highlight"/>
+            </xpath>
+          <notebook position="inside">
+			<page string="Directors">
+                        <field name="TagCustList01" context="{'tag_list1_id': active_id}">
+                        <tree string="Blocked Members" editable="top">
+                        <field name="TagList101" />
+						<field name="TagList102" />
+						<field name="TagList103" />
+						<field name="TagList105" />
+						<field name="TagList104" />	
+						<field name="TagList106" />							
+                        </tree>
+                    </field>
+					<field name="TagDevNotesLT1" />
+			</page>
+			<page string="Purchase">
+	            <group>
+	                <group>
+						<field name="TagCust14" />
+						<field name="TagCust15" />
+						<field name="TagCust16" />
+						<field name="TagCust17" />
+						<field name="TagCust18" />
+						<field name="TagCust19" />
+						<field name="TagCust20" />
+						<field name="TagCust21" />
+					</group>
+					<group>
+						<field name="TagCust22" />
+						<field name="TagCust23" />
+						<field name="TagCust24" />
+						<field name="TagCust25" />
+						<field name="TagCust26" />
+						<field name="TagCust27" />
+						<field name="TagCust31" />
+						<field name="TagCust32" />
+						<field name="TagCust28" />
+					</group>
+				</group>
+				<field name="TagCustList02" context="{'tag_list1_id': active_id}">
+                        <tree string="Blocked Members" editable="top">
+                        
+						<field name="TagList202" />	
+                        </tree>
+                    </field>
+				<field name="TagDevNotesFT2" />
+			</page>
+			<page string="Trade In">
+		    <group>
+		        <group>
+						<field name="TagCust34" />
+						<field name="TagCust35" />
+						<field name="TagCust36" />
+						<field name="TagCust37" />
+						<field name="TagCust38" />
+						<field name="TagCust39" />
+						<field name="TagCust40" />
+		    	</group>
+		        <group>
+						<field name="TagCust41" />
+						<field name="TagCust42" widget="selection"/>
+						<field name="TagCust43" widget="selection"/>
+						<field name="TagCust44" widget="selection"/>
+						<field name="TagCust45" />
+						<field name="TagCust47" />
+						<field name="TagCust48" />
+						<field name="TagCust46" />
+		    	</group>
+		    </group>
+			<field name="TagDevNotesFT3" />
+	        </page>
+	        <page string="Dealer Quotes">
+		    <field name="TagCustList03" context="{'tag_list1_id': active_id}">
+                        <tree string="Tree List 3" editable="top">
+                        <field name="TagList301" />
+	                    <field name="TagList302" />
+			    <field name="TagList303" />
+			    <field name="TagList304" />
+			    <field name="TagList305" />
+			    <field name="TagList305a" />
+			    <field name="TagList306" />
+                        </tree>
+                    </field>
+					<field name="TagDevNotesLT3" />
+	        </page>
+			<page string="Assett and Liabilities">
+		    <group>
+		        <group>
+						<field name="TagCustL1Label" />
+						<field name="TagCustAL1" />
+						<field name="TagCustAL2" />
+						<field name="TagCustAL3" />
+						<field name="TagCustAL4" />
+						<field name="TagCustAL5" />
+						<field name="TagCustAL6" />
+						<field name="TagCustAL7" />
+						<field name="TagCustAL8" />
+						<field name="TagCustAL9" />
+						<field name="TagCustAL9a" />
+						<field name="TagCustAL9b" />
+						<field name="TagCustAL9c" />
+						<field name="TagCustAL9d" />
+						<field name="TagCustAL10" />
+						<field name="TagCustAL11" />
+						<field name="TagCustAL12" />
+						<field name="TagCustAL13" />
+						<field name="TagCustAL14" />
+						<field name="TagCustAL15" />
+						<field name="TagCustAL16" />
+		    	</group>	
+		        <group>
+						<field name="TagCustL1Label2" />
+						<field name="TagCustAL21" />
+						<field name="TagCustAL22" />
+						<field name="TagCustAL23" />
+						<field name="TagCustAL24" />
+						<field name="TagCustAL25" />
+						<field name="TagCustAL26" />
+						<field name="TagCustAL27" />
+						
+						
+						
+						<field name="TagCustAL31" />
+						<field name="TagCustAL32" />
+						<field name="TagCustAL33" />
+						
+						<field name="TagCustAL36" />
+		    	</group>
+		    </group>
+			<field name="TagDevNotesFT4" />
+	        </page> 
+				<page string="Accountant">
+					<field name="TagCustList04" context="{'tag_list1_id': active_id}">
+                        <tree string="Blocked Members" editable="top">
+                        <field name="TagList401" />
+	                    <field name="TagList402" />
+						<field name="TagList403" />
+						<field name="TagList404" />
+						<field name="TagList406" />
+						<field name="TagList405" />
+                        </tree>
+                    </field>
+					<field name="TagDevNotesLT4" />
+				</page> 
+				<page string="Lender">
+					<field name="TagCustList05" context="{'tag_list1_id': active_id}">
+                        <tree string="Blocked Members" editable="top">
+						<field name="TagList507" />
+                        <field name="TagList501" />
+	                    <field name="TagList502" />
+						<field name="TagList503" />
+						<field name="TagList504" />
+						<field name="TagList505" />
+						<field name="TagList506" />
+						
+                        </tree>
+                    </field>
+					<field name="TagDevNotesLT5" />
+					<page string="Upload Data">
+	            <group>
+	                <group>
+						<field name="TagCust12" />
+						<field name="TagCust2" />
+						<field name="TagCust3" />
+						<field name="TagCust4" />
+						<field name="TagCust5" />
+	                </group>
+	                <group>
+						<field name="TagCust6" />
+						<field name="TagCust7" />
+						<field name="TagCust8" />				
+	                </group>
+	            </group>
+				<field name="TagDevNotesFT1" />
+				<field name="TagDevNotesFT1H" />
+	        </page>
+				</page>
+            </notebook>        
+        </field>
+    </record>
+  </data>
+</openerp>

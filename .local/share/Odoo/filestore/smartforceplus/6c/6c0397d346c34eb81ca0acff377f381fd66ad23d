@@ -1,0 +1,44 @@
+Return-path: <tagsbm@gmail.com>
+Envelope-to: task@smartforceplus.com
+Delivery-date: Mon, 31 Aug 2015 15:59:45 -0500
+Received: from mail-ig0-f178.google.com ([209.85.213.178]:32921)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <tagsbm@gmail.com>) id 1ZWWB6-0003mZ-VE
+ for task@smartforceplus.com; Mon, 31 Aug 2015 15:59:45 -0500
+Received: by igbuu8 with SMTP id uu8so55754826igb.0
+ for <task@smartforceplus.com>; Mon, 31 Aug 2015 13:59:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=mime-version:sender:date:message-id:subject:from:to:content-type;
+ bh=E0YNX1ZCyhwVXcs2nhDYQXNe85vr3rLk9A9Deu7N/1g=;
+ b=G7S6noeF/qAIuZTgwuPtKfCkMH+aKADiD9LxuDRrFM7EtlCuEuHl6C1SxpHM390PEk
+ wwQzWSLWxFNyijzZLkJjoluse7UiJD7clgSSCgJsrjrNjF4gZQl62GZJrGg5Mu5gBByH
+ Ne6N0PkaQbTZs8akC8iv1D6b0nZd1nlUxewciRNxLfnSGK0Yqh64i5bE9GWsLCxW4NEO
+ sGO7eurP21TlGwmGmKetlZ4d+fflYzh/6yWqAxc/cstgM+whp1IAZ9uMJIQNn93usjkZ
+ kGkZ/DdSnjaWmJokucI+bnMtTPtAosr+yu95r3wW6toWF9+m+vWDsMwJewzoyQubzfke
+ kJqA==
+MIME-Version: 1.0
+X-Received: by 10.50.79.129 with SMTP id j1mr497250igx.63.1441054782911; Mon,
+ 31 Aug 2015 13:59:42 -0700 (PDT)
+Sender: tagsbm@gmail.com
+Received: by 10.36.201.198 with HTTP; Mon, 31 Aug 2015 13:59:42 -0700 (PDT)
+Received: by 10.36.201.198 with HTTP; Mon, 31 Aug 2015 13:59:42 -0700 (PDT)
+Date: Tue, 1 Sep 2015 06:59:42 +1000
+X-Google-Sender-Auth: gmk0yOUPf-ohpovz_okwIprWDkQ
+Message-ID: <CAJMZX9S5RSjS5+utEOa8WZRKx6A29sif5onBSQzaSw=E47t9bQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Driving_your_Marketing_Campaigns_=E2=80=94_Odoo_Book_8=2E0_d?=
+ =?UTF-8?Q?ocumentation?=
+From: Anthony Gardiner <agardiner@tagsbm.com>
+To: lara@tagsbm.com, task@smartforceplus.com
+Content-Type: multipart/alternative; boundary=089e011609fc6ffc22051ea1b6bc
+
+--089e011609fc6ffc22051ea1b6bc
+Content-Type: text/plain; charset=UTF-8
+
+http://openerpbook.com/crm_sale/3/index.html
+
+--089e011609fc6ffc22051ea1b6bc
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr"><a href="http://openerpbook.com/crm_sale/3/index.html">http://openerpbook.com/crm_sale/3/index.html</a></p>
+
+--089e011609fc6ffc22051ea1b6bc--

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report auto        = "False"
+			    id          = "account_fstr_report_test_ept"
+			    model       = "account_fstr.category"
+			    name        = "Account HTML Report"
+			    file        = "accounts_reports_ept/reports/account_fstr_test.mako"
+			    string      = "Print HTML Template"
+			    report_type = "webkit" />
+
+    </data>
+</openerp>

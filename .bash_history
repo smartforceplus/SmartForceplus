@@ -20,3 +20,17 @@ more /var/script.sh
 vi /var/script.sh 
 su - postgres -c "pg_dump smartforceplus > /opt/smartforceplus/smartforceplus-sql-$din"
 exit
+git add .
+git commit -m 'Hamid commits'
+git push origin master
+git commit -m 'Comitted By Hamid'
+git config --global user.name "smartforceplus"
+git commit -m 'Comitted By Hamid'
+git push origin master
+more .ssh/id_rsa
+ls
+exit
+git add .
+git status
+git add -A .
+exit

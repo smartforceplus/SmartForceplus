@@ -1,0 +1,38 @@
+Return-path: <martin@subdivisionandstrata.com.au>
+Envelope-to: anthony@smartforceplus.com
+Delivery-date: Fri, 11 Sep 2015 16:40:13 -0500
+Received: from mail-io0-f182.google.com ([209.85.223.182]:35251)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:AES128-GCM-SHA256:128)
+ (Exim 4.85) (envelope-from <martin@subdivisionandstrata.com.au>)
+ id 1ZaW3J-000JJe-Ju
+ for anthony@smartforceplus.com; Fri, 11 Sep 2015 16:40:13 -0500
+Received: by ioiz6 with SMTP id z6so112559142ioi.2
+ for <anthony@smartforceplus.com>; Fri, 11 Sep 2015 14:40:10 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20130820;
+ h=x-gm-message-state:from:mime-version:date:message-id:subject:to
+ :content-type;
+ bh=woQXXHjrKkdHCtTnOE0aLSK5AeiAjODWz+66n7p/OVE=;
+ b=FdSr9seJRhjTjut+D5tcdA3OV78uEaYFRD14xH60DCw5IdR0NrXvL2Y+z73crvs0qL
+ osVTi7TlyrIHmaZ3h32VCdKxmvnnX8Oc3wyMdFfN3oo7XrwJqvhjovf53h4S4Wd1IgGS
+ 2Xd2OtpwZWzpLPr3h7pkcGsru2drwldhtp72+39k4+I5OFl9UAtpSKg4Qkaf+kYK3eP7
+ 1Vu42mP+4G9vuti9cC6SkrvfGKUB/k36JIbXp1q/gqV9+F8sNMAS3KG3ZPGnKzmAvDEJ
+ 44GYHZYVAndJ0M59ghHOZgFXWIcvnL8Nq+lMXNwLamw+9Yj6kVr/x6NiJjjgCLazM8ES
+ upIw==
+X-Gm-Message-State: ALoCoQlWYEvXfpgjCQps9NUhQqio745NYIcpiS9kdid6az+6BYQGFdoEQyxdINa5tJDGQVQDl0CI
+X-Received: by 10.107.10.91 with SMTP id u88mr7020578ioi.136.1442007610334;
+ Fri, 11 Sep 2015 14:40:10 -0700 (PDT)
+Received: from null named unknown by gmailapi.google.com with HTTPREST; Fri,
+ 11 Sep 2015 14:40:09 -0700
+From: Martin Purcell <martin@subdivisionandstrata.com.au>
+MIME-Version: 1.0
+Date: Fri, 11 Sep 2015 14:40:09 -0700
+Message-ID: <CAHDF4VZxGkgcqioh-0aW+5EqdATt7Ef4T3nQg918GPe-QomVuA@mail.gmail.com>
+Subject: Simon Sinek: How great leaders inspire action
+To: anthony@smartforceplus.com
+Content-Type: text/plain; charset=UTF-8
+
+Simon Sinek: How great leaders inspire action
+
+
+http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action

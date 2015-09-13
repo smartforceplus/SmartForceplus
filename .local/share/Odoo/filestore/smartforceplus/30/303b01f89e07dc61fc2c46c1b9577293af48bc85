@@ -1,0 +1,82 @@
+Return-path: <>
+Envelope-to: martin@smartforceplus.com
+Delivery-date: Sat, 12 Sep 2015 02:52:35 -0500
+Received: from mailnull by gator3236.hostgator.com with local (Exim 4.85)
+ id 1Zafbv-000Gzu-17
+ for martin@smartforceplus.com; Sat, 12 Sep 2015 02:52:35 -0500
+X-Failed-Recipients: tagqualitycontrol@tagsbm.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@gator3236.hostgator.com>
+To: martin@smartforceplus.com
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1Zafbv-000Gzu-17@gator3236.hostgator.com>
+Date: Sat, 12 Sep 2015 02:52:35 -0500
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  tagqualitycontrol@tagsbm.com
+    No Such User Here"
+
+------ This is a copy of the message, including all the headers. ------
+
+Return-path: <martin@smartforceplus.com>
+Received: from static.32.49.243.136.clients.your-server.de ([136.243.49.32]:46755 helo=[127.0.0.1])
+	by gator3236.hostgator.com with esmtpsa (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.85)
+	(envelope-from <martin@smartforceplus.com>)
+	id 1Zafbu-000GyY-Pb
+	for tagqualitycontrol@tagsbm.com; Sat, 12 Sep 2015 02:52:34 -0500
+Content-Type: multipart/mixed; boundary="===============6411515141964947794=="
+MIME-Version: 1.0
+Message-Id: <1442044328.344666957855225.397404836252199-openerp-1-mail.group@jahacapty>
+Subject: Re: Tag Lines
+From: Martin <martin@smartforceplus.com>
+Reply-To: Martin <martin@smartforceplus.com>
+To: TAG Quality Control <tagqualitycontrol@tagsbm.com>
+Date: Sat, 12 Sep 2015 07:52:33 -0000
+X-Auto-Response-Suppress: OOF
+Precedence: list
+
+--===============6411515141964947794==
+Content-Type: multipart/alternative;
+ boundary="===============2347632508882509044=="
+MIME-Version: 1.0
+
+--===============2347632508882509044==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+U1lTVEVNSVNFIGFuZCBHUk9XCllvdXIgQnVzaW5lc3MuLi4uCgoKc28geW91IGNhbiBlbmpveSB0
+aGUgZ29vZCB0aGluZ3MgaW4gTGlmZQoKClNlbnQgYnkgU21hcnQgRm9yY2UgUGx1cyBQdHkgTHRk
+IFsxXSB1c2luZyBPZG9vIFsyXQoKLCAgYWNjZXNzIGRpcmVjdGx5IHRvIERpc2N1c3Npb24gZ3Jv
+dXAgV2hvbGUgQ29tcGFueSBbM10KCgpbMV0gaHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5jb20K
+WzJdIGh0dHBzOi8vd3d3Lm9kb28uY29tLwpbM10gaHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5j
+b20vd2ViL3NpZ251cD9yZWRpcmVjdD0lMkZ3ZWIlMjNhY3Rpb24lM0RtYWlsLmFjdGlvbl9tYWls
+X3JlZGlyZWN0JTI2bW9kZWwlM0RtYWlsLmdyb3VwJTI2aWQlM0QxJnRva2VuPWRGYWVMWk1acGxW
+R1BBWFdTYXpWJmRiPXNtYXJ0Zm9yY2VwbHVzCg==
+
+--===============2347632508882509044==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PGJhc2UgaHJlZj0naHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5jb20nPgo8cD5TWVNURU1JU0Ug
+YW5kIEdST1c8YnI+CllvdXIgQnVzaW5lc3MuLi4uPC9wPgoKPHA+PGJyPgpzbyB5b3UgY2FuIGVu
+am95IHRoZSBnb29kIHRoaW5ncyBpbiBMaWZlPC9wPgoKCjxiciAvPjxzbWFsbD5TZW50IGJ5IDxh
+IHN0eWxlPSdjb2xvcjppbmhlcml0JyBocmVmPSdodHRwOi8vd3d3LnNtYXJ0Zm9yY2VwbHVzLmNv
+bSc+U21hcnQgRm9yY2UgUGx1cyBQdHkgTHRkPC9hPiB1c2luZyA8YSBzdHlsZT0nY29sb3I6aW5o
+ZXJpdCcgaHJlZj0naHR0cHM6Ly93d3cub2Rvby5jb20vJz5PZG9vPC9hPjwvc21hbGw+CgoKLCA8
+c3BhbiBjbGFzcz0nb2VfbWFpbF9mb290ZXJfYWNjZXNzJz48c21hbGw+YWNjZXNzIGRpcmVjdGx5
+IHRvIDxhIHN0eWxlPSdjb2xvcjppbmhlcml0JyBocmVmPSdodHRwOi8vd3d3LnNtYXJ0Zm9yY2Vw
+bHVzLmNvbS93ZWIvc2lnbnVwP3JlZGlyZWN0PSUyRndlYiUyM2FjdGlvbiUzRG1haWwuYWN0aW9u
+X21haWxfcmVkaXJlY3QlMjZtb2RlbCUzRG1haWwuZ3JvdXAlMjZpZCUzRDEmdG9rZW49ZEZhZUxa
+TVpwbFZHUEFYV1NhelYmZGI9c21hcnRmb3JjZXBsdXMnPkRpc2N1c3Npb24gZ3JvdXAgV2hvbGUg
+Q29tcGFueTwvYT48L3NtYWxsPjwvc3Bhbj4KCg==
+
+--===============2347632508882509044==--
+
+--===============6411515141964947794==--

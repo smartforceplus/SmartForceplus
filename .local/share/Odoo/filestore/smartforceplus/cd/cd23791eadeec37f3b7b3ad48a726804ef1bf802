@@ -1,0 +1,149 @@
+Return-path: <>
+Envelope-to: martin@smartforceplus.com
+Delivery-date: Sat, 12 Sep 2015 02:52:39 -0500
+Received: from gateway32.websitewelcome.com ([192.185.145.114]:41624)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+ (Exim 4.85) id 1Zafby-000H2i-QX
+ for martin@smartforceplus.com; Sat, 12 Sep 2015 02:52:38 -0500
+Received: by gateway32.websitewelcome.com (Postfix)
+ id A9BB4461F85EA; Sat, 12 Sep 2015 02:52:37 -0500 (CDT)
+Date: Sat, 12 Sep 2015 02:52:37 -0500 (CDT)
+From: MAILER-DAEMON@gateway32.websitewelcome.com (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: martin@smartforceplus.com
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+ boundary="5DB74461F809D.1442044357/gateway32.websitewelcome.com"
+Message-Id: <20150912075237.A9BB4461F85EA@gateway32.websitewelcome.com>
+
+This is a MIME-encapsulated message.
+
+--5DB74461F809D.1442044357/gateway32.websitewelcome.com
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host gateway32.websitewelcome.com.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<referral@subdivide.biz>: host mail.subdivide.biz[173.254.37.65] said: 550 No
+    Such User Here" (in reply to RCPT TO command)
+
+--5DB74461F809D.1442044357/gateway32.websitewelcome.com
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; gateway32.websitewelcome.com
+X-Postfix-Queue-ID: 5DB74461F809D
+X-Postfix-Sender: rfc822; martin@smartforceplus.com
+Arrival-Date: Sat, 12 Sep 2015 02:52:33 -0500 (CDT)
+
+Final-Recipient: rfc822; referral@subdivide.biz
+Action: failed
+Status: 5.0.0
+Remote-MTA: dns; mail.subdivide.biz
+Diagnostic-Code: smtp; 550 No Such User Here"
+
+--5DB74461F809D.1442044357/gateway32.websitewelcome.com
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <martin@smartforceplus.com>
+Received: by gateway32.websitewelcome.com (Postfix, from userid 500)
+ id 5DB74461F809D; Sat, 12 Sep 2015 02:52:33 -0500 (CDT)
+Received: from cm1.websitewelcome.com (cm.websitewelcome.com [192.185.0.102])
+ by gateway32.websitewelcome.com (Postfix) with ESMTP id 5B3E4461F807F
+ for <referral@subdivide.biz>; Sat, 12 Sep 2015 02:52:33 -0500 (CDT)
+Received: from gator3236.hostgator.com ([198.57.247.200])
+ by cm1.websitewelcome.com with 
+ id G7sX1r0054L9U9i017sYGP; Sat, 12 Sep 2015 02:52:33 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=smartforceplus.com; s=default; 
+ h=Date:To:Reply-To:From:Subject:Message-Id:MIME-Version:Content-Type;
+ bh=26W2pEciSqD3SnISKXbwQmgfUjfQ+Gycpn7q1cPmrmk=; 
+ b=XYxipJ8/kZjOOQEFB6xqWsszBW1tHtPpPLFEUmZm482AErPY9UNxZlBLsc9Sknje0A7+xWyiiNxuLKfzB4eo1pLpNaJiud9YEgIs4uobNkXbK98/5j6m9/+xczge7hcM5PTAVru6fTV+GpAdRRgMSgVSSUK+njbQKZlUSnPdIhI=;
+Received: from static.32.49.243.136.clients.your-server.de
+ ([136.243.49.32]:46753 helo=[127.0.0.1])
+ by gator3236.hostgator.com with esmtpsa
+ (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256) (Exim 4.85)
+ (envelope-from <martin@smartforceplus.com>) id 1Zafbr-000GvQ-0M
+ for referral@subdivide.biz; Sat, 12 Sep 2015 02:52:31 -0500
+Content-Type: multipart/mixed; boundary="===============7021454285231542411=="
+MIME-Version: 1.0
+Message-Id: <1442044328.344666957855225.397404836252199-openerp-1-mail.group@jahacapty>
+Subject: Re: Tag Lines
+From: Martin <martin@smartforceplus.com>
+Reply-To: Martin <martin@smartforceplus.com>
+To: Referral <referral@subdivide.biz>
+Date: Sat, 12 Sep 2015 07:52:29 -0000
+X-Auto-Response-Suppress: OOF
+Precedence: list
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - gator3236.hostgator.com
+X-AntiAbuse: Original Domain - subdivide.biz
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - smartforceplus.com
+X-BWhitelist: no
+X-Source-IP: 136.243.49.32
+X-Exim-ID: 1Zafbr-000GvQ-0M
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: static.32.49.243.136.clients.your-server.de ([127.0.0.1])
+ [136.243.49.32]:46753
+X-Source-Auth: martin@smartforceplus.com
+X-Email-Count: 6
+X-Source-Cap: YW50aG9ueWc7YW50aG9ueWc7Z2F0b3IzMjM2Lmhvc3RnYXRvci5jb20=
+
+--===============7021454285231542411==
+Content-Type: multipart/alternative;
+ boundary="===============9164206094323209318=="
+MIME-Version: 1.0
+
+--===============9164206094323209318==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+U1lTVEVNSVNFIGFuZCBHUk9XCllvdXIgQnVzaW5lc3MuLi4uCgoKc28geW91IGNhbiBlbmpveSB0
+aGUgZ29vZCB0aGluZ3MgaW4gTGlmZQoKClNlbnQgYnkgU21hcnQgRm9yY2UgUGx1cyBQdHkgTHRk
+IFsxXSB1c2luZyBPZG9vIFsyXQoKLCAgYWNjZXNzIGRpcmVjdGx5IHRvIERpc2N1c3Npb24gZ3Jv
+dXAgV2hvbGUgQ29tcGFueSBbM10KCgpbMV0gaHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5jb20K
+WzJdIGh0dHBzOi8vd3d3Lm9kb28uY29tLwpbM10gaHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5j
+b20vd2ViL3NpZ251cD9yZWRpcmVjdD0lMkZ3ZWIlMjNhY3Rpb24lM0RtYWlsLmFjdGlvbl9tYWls
+X3JlZGlyZWN0JTI2bW9kZWwlM0RtYWlsLmdyb3VwJTI2aWQlM0QxJnRva2VuPWlabU0yZHVha1k3
+N21tZXBwQjZsJmRiPXNtYXJ0Zm9yY2VwbHVzCg==
+
+--===============9164206094323209318==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PGJhc2UgaHJlZj0naHR0cDovL3d3dy5zbWFydGZvcmNlcGx1cy5jb20nPgo8cD5TWVNURU1JU0Ug
+YW5kIEdST1c8YnI+CllvdXIgQnVzaW5lc3MuLi4uPC9wPgoKPHA+PGJyPgpzbyB5b3UgY2FuIGVu
+am95IHRoZSBnb29kIHRoaW5ncyBpbiBMaWZlPC9wPgoKCjxiciAvPjxzbWFsbD5TZW50IGJ5IDxh
+IHN0eWxlPSdjb2xvcjppbmhlcml0JyBocmVmPSdodHRwOi8vd3d3LnNtYXJ0Zm9yY2VwbHVzLmNv
+bSc+U21hcnQgRm9yY2UgUGx1cyBQdHkgTHRkPC9hPiB1c2luZyA8YSBzdHlsZT0nY29sb3I6aW5o
+ZXJpdCcgaHJlZj0naHR0cHM6Ly93d3cub2Rvby5jb20vJz5PZG9vPC9hPjwvc21hbGw+CgoKLCA8
+c3BhbiBjbGFzcz0nb2VfbWFpbF9mb290ZXJfYWNjZXNzJz48c21hbGw+YWNjZXNzIGRpcmVjdGx5
+IHRvIDxhIHN0eWxlPSdjb2xvcjppbmhlcml0JyBocmVmPSdodHRwOi8vd3d3LnNtYXJ0Zm9yY2Vw
+bHVzLmNvbS93ZWIvc2lnbnVwP3JlZGlyZWN0PSUyRndlYiUyM2FjdGlvbiUzRG1haWwuYWN0aW9u
+X21haWxfcmVkaXJlY3QlMjZtb2RlbCUzRG1haWwuZ3JvdXAlMjZpZCUzRDEmdG9rZW49aVptTTJk
+dWFrWTc3bW1lcHBCNmwmZGI9c21hcnRmb3JjZXBsdXMnPkRpc2N1c3Npb24gZ3JvdXAgV2hvbGUg
+Q29tcGFueTwvYT48L3NtYWxsPjwvc3Bhbj4KCg==
+
+--===============9164206094323209318==--
+
+--===============7021454285231542411==--
+
+--5DB74461F809D.1442044357/gateway32.websitewelcome.com--

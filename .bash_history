@@ -34,3 +34,5 @@ git add .
 git status
 git add -A .
 exit
+./openerp-server 
+exit

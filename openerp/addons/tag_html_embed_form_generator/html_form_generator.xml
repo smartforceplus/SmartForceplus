@@ -19,6 +19,7 @@
                       <group>
                           <field name="name"/>
                           <field name="thank_url" placeholder="http://www.google.com"/>
+                          <field name="template_id"/>
                           <field name="campaign_id"/>
                           <field name="tag_id"/>
                           <field name="form_type"/>

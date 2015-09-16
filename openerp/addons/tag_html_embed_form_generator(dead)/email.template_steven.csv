@@ -1,0 +1,2 @@
+"id","name","model_id/id","email_from","email_to","partner_to","subject","body_html"
+"__export__.email_template_9","SFP  Learn More Campaign First Email","auth_signup.model_res_partner","anthony@smartforceplus.com","${object.email}","${object.id}","Thank you for signing up","You will be receiving a series of emails from now on"

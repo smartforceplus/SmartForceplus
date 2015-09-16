@@ -5,7 +5,6 @@
     'category': "Tools",
     'data': [
         'html_form_generator.xml',
-        'email.template.csv',
     ],
     'demo': [],
     'depends': ['crm','marketing_campaign'],

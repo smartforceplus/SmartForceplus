@@ -70,6 +70,7 @@ class html_tag_gen(models.Model):
 
     name = fields.Char(string='Form Name', required='True', readonly=True)
     campaign_id = fields.Many2one('marketing.campaign', required='True', string='Campaign', readonly=True)
+    template_id = fields.Many2one('email.template',string="Email Template", help="The initial email that gets sent when a person submits the form", domain="[('model_id.model','=', 'res.partner')]")
     fields_ids = fields.Many2many('ir.model.fields', domain="['|',('ttype','=','char'),'|',('ttype','=','text'),('ttype','=','integer'),('name','!=','create_date'),('name','!=','create_uid'),('name','!=','id'),('name','!=','write_date'),('name','!=','write_uid'),('model_id.model','=','res.partner')]",string="Form Fields")
     output_html = fields.Text(string='Embed Code')
     tag_id = fields.Many2one('res.partner.category', readonly=True)

@@ -13,6 +13,7 @@ class tag_customer_tabs(osv.osv):
 		'status': fields.many2one('status', 'Status', select=True),
         'parent_id': fields.many2one('res.partner', 'Related Company', select=True, track_visibility='always'),
 		'lastname': fields.char('Last Name', size=64, select=True, track_visibility='always'),
+		'birth_date': fields.date('Birth Date', help="Send a birthday wish?", select=True, track_visibility='always'),
         'street_n': fields.char('Street', select=True, track_visibility='always'),
         'street2_n': fields.char('Street2', select=True, track_visibility='always'),
         'zip_n': fields.char('Zip', size=24, change_default=True, select=True, track_visibility='always'),

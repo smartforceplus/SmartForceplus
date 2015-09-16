@@ -6,7 +6,7 @@ from openerp.http import werkzeug
 class MyController(http.Controller):
 
 
-    @http.route('/form/tag/myinsert',type="http")
+    @http.route('/form/tag/myinsert',type="http", auth="public")
     def my_insert(self, **kwargs):
         
         values = {}
@@ -20,7 +20,6 @@ class MyController(http.Controller):
         #the referral string is what the campaign looks for
         secure_values = {}
         secure_values['website'] = request.httprequest.headers['Referer']
-        secure_values['tag_crm_states'] = "Lead"
         
         #populate an array which has ONLY the fields that are in the form (prevent injection)
         for fi in rl[0].fields_ids:
@@ -31,10 +30,11 @@ class MyController(http.Controller):
         request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(rl[0].tag_id.id) + ',' + str(new_lead_id) + ')')
         
         #send them an email
-        email_template = request.env['email.template'].search([('name','=','(Tag)Campaign First Email')])
-        mail_values = request.env['email.template'].generate_email(email_template[0].id, new_lead_id)
-        mail = request.env['mail.mail'].create(mail_values)
-        request.env['mail.mail'].send(mail)
+        _logger.error(rl[0].template_id.id)
+        _logger.error(new_lead_id)
+        mail_values = request.registry['email.template'].generate_email(request.cr, SUPERUSER_ID, rl[0].template_id.id, new_lead_id)
+        mail = request.registry['mail.mail'].create(request.cr, SUPERUSER_ID, mail_values)
+        request.registry['mail.mail'].send(request.cr, SUPERUSER_ID, [mail])
         
         return werkzeug.utils.redirect(rl[0].thank_url,301)
     

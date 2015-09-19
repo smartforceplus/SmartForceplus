@@ -260,7 +260,7 @@
                                     </form>
                                 </field>
                             </page>
-<page string="Assetts and Liabilities">
+<!--<page string="Assetts and Liabilities">
 								<group>
 									<group string="Assetts">
 										<field name="T1F4" string="Cash at Bank"/>
@@ -300,7 +300,7 @@
 									</group>
 								</group>
 	                        </page>
-							<!--<page string="Lender">
+							<page string="List View">
 								<field name="TagPartnerList01" context="{'tag_partnerlist1_id': active_id}">
 								<tree string="Blocked Members" editable="top">
 									<field name="TagList101" string="Lender Name"/>
@@ -328,7 +328,8 @@
 									<group>
 									<group string="Subscriber">
 										<field name="TF10" string="BRM Site" widget="url"/>
-
+										<field name="TF13" string="Temporary User Name"/>
+										<field name="TF11" string="Temporary Password"/>
 										</group>
 										<group>
 

@@ -23,7 +23,7 @@ class tag_customer_tabs(osv.osv):
         'email_form': fields.char('Email', select=True, track_visibility='always'),
         'phone_num': fields.char('Phone', select=True, track_visibility='always'),
         'fax_num': fields.char('Fax', select=True, track_visibility='always'),
-        'tag_crm_states': fields.selection([('Lead','Lead'), ('Customer','Customer'),('Referral','Referral')], 'State'),
+        'tag_crm_states': fields.selection([('1','Lead'), ('2','Customer'),('3','Referral')], 'Contact Status'),
         'mobile_num': fields.char('Mobile', select=True, track_visibility='always'),
         'vehicle_name_n': fields.char('Vehicle', size=64, select=True, track_visibility='always'),
         'date_deadline': fields.date('Expected Closing', help="Estimate of the date on which the opportunity will be won.", select=True, track_visibility='always'),
@@ -50,7 +50,7 @@ class tag_customer_tabs(osv.osv):
 		'TF10': fields.char('BRM Site', size=50), 
 		'TF11': fields.char('Init BRM Pass', size=20), 
 		'TF12': fields.char('Website', size=50),
-		'TF13': fields.char('TF13', size=25),
+		'TF13': fields.char('Access Email', size=50),
 		'TF14': fields.date(' TF14'), 
 		'TF15': fields.float('TF15'), 
 		'TF16': fields.char('TF16',size=25), 
@@ -134,7 +134,7 @@ class tag_customer_tabs(osv.osv):
        # 'stage_id': lambda s, cr, uid, c: s._get_default_stage_id(cr, uid, c),
        # 'section_id': lambda s, cr, uid, c: s._get_default_section_id(cr, uid, context=c),
         'priority': lambda *a: crm.AVAILABLE_PRIORITIES[2][0],
-        'tag_crm_states':'Lead',
+        'tag_crm_states':'1',
     
     }
 

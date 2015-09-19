@@ -259,45 +259,15 @@
 	                                    <field name="message_ids" widget="mail_thread"/>	                                
 	                                </div>
 	                            </page>						
-							<page string="Assetts and Liabilities">
+							<page string="Smart Force Plus">
 								<group>
-									<group string="Assetts">
-										<field name="T1F4" string="Cash at Bank"/>
-										<field name="T1F5" string="Residential Property"/>
-										<field name="T1F6" string="Property 1"/>
-										<field name="T1F7" string="Property 2"/>
-										<field name="T1F8" string="Property 3"/>
-										<field name="T1F9" string="Other Investments"/>
-										<field name="T1F10" string="Fixtures and Fittings"/>
-										<field name="T1F11" string="Furniture"/>
-										<field name="T1F12" string="Superannuation"/>
-										<field name="T1F13" string="TDP Cover"/>
-										<field name="T1F14" string="Trauma"/>
-										<field name="T1F15" string="Income Protect"/>
-										<field name="T1F16" string="Life Insurance"/>
-										<field name="T1F17" string="Shares"/>
-										<field name="T1F18" string="Plant and Equip"/>
-										<field name="T1F17" string="Motor Vehicle"/>
-										<field name="T1F18" string="Bike/Van/Boat"/>
-										<field name="T1F19" string="Valuables"/>
-										<field name="T1F20" string="Business Val"/>
-										<field name="T1F20" string="Total Assetts"/>
-										
+									<group string="Subscriber">
+										<field name="TF10" string="BRM Site" widget="url"/>
+										<field name="TF13" string="Temporary User Name"/>
+										<field name="TF11" string="Temporary Password"/>
 									</group>
-									<group string="Liabilities">	
-										<field name="T1F21" string="Overdraught"/>
-										<field name="T1F22" string="Residential Property"/>
-										<field name="T1F23" string="Property 1"/>
-										<field name="T1F24" string="Property 2"/>
-										<field name="T1F25" string="Property 3"/>
-										<field name="T1F26" string="Other Investments"/>
-										<field name="T1F27" string="Credit Cards"/>
-										<field name="T1F28" string="Plant and Equip"/>
-										<field name="T1F29" string="Motor Vehicle"/>
-										<field name="T1F30" string="Bike/Van/Boat"/>
-										<field name="T1F31" string="Total Liabilities"/>
 									</group>
-								</group>
+
 	                        </page>
 							<!--<page string="Dealer">
 								<field name="TagPartnerList01" context="{'tag_partnerlist1_id': active_id}">
@@ -325,14 +295,7 @@
 									</group>
 									</group>
 									<group>
-									<group string="Subscriber">
-										<field name="TF10" string="BRM Site" widget="url"/>
-										<field name="TF11" string="Init Password" />
-										</group>
-										<group>
 
-									
-									</group>
 									</group>									
 	                        </page>
 							<!--<page string="LT2">

@@ -39,8 +39,8 @@ class res_partner(osv.osv):
         partner_obj = self.pool.get('res.partner')
         temp_obj = self.pool.get('email.template')
         group_obj = self.pool.get('mail.group')
-        wish_template_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'birthday_wish', 'email_template_birthday_wish')[1]
-        group_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'birthday_wish', 'group_birthday')[1]
+        wish_template_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'sfp_birthday_wish', 'email_template_birthday_wish')[1]
+        group_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'sfp_birthday_wish', 'group_birthday')[1]
         today = datetime.now()
         today_month_day = '%-' + today.strftime('%m') + '-' + today.strftime('%d')
         partner_ids = partner_obj.search(cr, uid, [('birth_date', 'like', today_month_day)])

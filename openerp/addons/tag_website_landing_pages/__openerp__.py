@@ -1,7 +1,7 @@
 {
     'name': "TAG Website Landing Page",
-    'version': "1.0",
-    'author': "tagsbm",
+    'version': "1.1",
+    'author': "sfp",
     'category': "Tools",
     'data': [
         'views/landing_page.xml',

@@ -338,7 +338,7 @@
                 </p>
             </field>
         </record>
-        <menuitem action="template_of_contract_action" id="menu_template_of_contract_action" parent="base.menu_base_config"/>
+        <!--<menuitem action="template_of_contract_action" id="menu_template_of_contract_action" parent="base.menu_base_config"/>-->
 
     </data>
 </openerp>

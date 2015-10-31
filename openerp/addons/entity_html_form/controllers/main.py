@@ -23,7 +23,8 @@ class MyController(http.Controller):
         secure_values = {}
         history_values = {}
         
-        ref_url = request.httprequest.headers['Referer']
+        ref_url = ""
+
         new_history_id = history_obj.create(request.cr, SUPERUSER_ID, {'ref_url':ref_url, 'html_id': values['form_id']})
         new_history = history_obj.browse(request.cr, SUPERUSER_ID, new_history_id)
         
@@ -62,7 +63,7 @@ class MyController(http.Controller):
         #the referral string is what the campaign looks for
         secure_values = {}
         secure_values['name'] = 'Web Lead'
-        secure_values['referred'] = request.httprequest.headers['Referer']
+        #secure_values['referred'] = request.httprequest.headers['Referer']
         
         #populate an array which has ONLY the fields that are in the form (prevent injection)
         for fi in rl[0].fields_ids:

@@ -11,6 +11,8 @@ class MyController(http.Controller):
         
         values = {}
 	for field_name, field_value in kwargs.items():
+            _logger.error(field_name)
+            _logger.error(field_value)
             values[field_name] = field_value
         
         
@@ -23,7 +25,10 @@ class MyController(http.Controller):
         secure_values = {}
         history_values = {}
         
-        ref_url = request.httprequest.headers['Referer']
+        ref_url = ""
+        if "Referer" in request.httprequest.headers:
+            ref_url = request.httprequest.headers['Referer']
+        
         new_history_id = history_obj.create(request.cr, SUPERUSER_ID, {'ref_url':ref_url, 'html_id': values['form_id']})
         new_history = history_obj.browse(request.cr, SUPERUSER_ID, new_history_id)
         

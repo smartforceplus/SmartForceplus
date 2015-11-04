@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+  
+      <record model="ir.ui.view" id="tag_task_dep_view">
+          <field name="name">tag_task_dep_view</field>
+          <field name="model">project.task</field>
+          <field name="inherit_id" ref="project.view_task_form2" />
+      	  <field name="arch" type="xml">
+      	      <field name="reviewer_id" position="after">
+      	              <field name="x_dep"/>
+              </field>
+      	  </field>
+      </record>
+      
+    </data>
+</openerp>

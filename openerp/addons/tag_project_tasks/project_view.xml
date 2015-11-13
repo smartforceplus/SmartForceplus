@@ -2,12 +2,11 @@
 <openerp>
   <data>
       
-      <record model="ir.ui.view" id="tag_project_view_inherit">
+      <record model="ir.ui.view" id="project.edit_project">
           <field name="name">Tag Project Form Inherit</field>
           <field name="model">project.project</field>
-          <field name="inherit_id" ref="project.edit_project" />
+          <!--<field name="inherit_id" ref="project.edit_project" />-->
 	  <field name="arch" type="xml">
-	      <form position="replace">
               
  <form string="Project">
                 <header>
@@ -24,19 +23,7 @@
                 <sheet string="Project">
                     
                     <notebook>
-					<page string="Smart Force +">
-						<field name="project_url"/>
-						<field name="domain_name"/>
-						<field name="host_name"/>
-						<field name="cpanel_user_sign_in"/>
-						<field name="cpanel_pwd"/>
-						<field name="crm_email"/>
-						<field name="mass_mail"/>
-						<field name="mass_mail_sender"/>
-					</page>
-					<page string="Detail" >
-					
-					<field name="google_folder_url" widget="url"/>                 
+					<page string="Detail" >                
                     <field name="analytic_account_id" invisible="1" required="0"/>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" string="Project Name"/>
@@ -57,31 +44,36 @@
                         </button>
                     </div>
                     <group>
-                        <group col="4">
+                        <group>
                             <field name="user_id" string="Project Manager" attrs="{'readonly':[('state','in',['close', 'cancelled'])]}" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_manager']}"/>
                             <newline/>
                             <field name="partner_id" on_change="onchange_partner_id(partner_id)" string="Customer"/>
-							
+										<field name="project_url" widget="url" string="Project Web Link"/>		
                         </group>
                             <p attrs="{'invisible': [('analytic_account_id','=',False)]}">
                                 To invoice or setup invoicing and renewal options, go to the related contract:
-                                <field name="analytic_account_id" readonly="1" required="0" class="oe_inline" nolabel="1"/>.
+                                <field name="analytic_account_id" readonly="1" required="0" class="oe_inline" nolabel="1"/>
                             </p>
-                        <group name="group_alias" attrs="{'invisible': [('alias_domain', '=', False)]}">
-                            <label for="alias_name" string="Email Alias"/>
-                            <div name="alias_def">
-                                <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
-                                <div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">
-                                    <field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
-                                </div>
-                            </div>
-                            <label for="alias_model" string="Incoming Emails create"/>
-                            <field name="alias_model" class="oe_inline" nolabel="1"/>
-                            <field name="alias_contact" class="oe_inline" string="Accept Emails From"/>
-							<field name="project_url" widget="url" string="Project Web Link"/>
-                    </group>
+					</group>
 					</page>
+					<page string="Site Details">
+					<group>
+						<field name="project_url" widget="url"/>
+						<field name="domain_name" widget="url"/>
+						<field name="host_name" widget="url" string="C Panel URL"/>
+						<field name="cpanel_user_sign_in"/>
+						<field name="cpanel_pwd"/> 
+					</group>
+					<group>
+						<field name="crm_email"/>
+						<field name="mass_mail"/>
+						<field name="mass_mail_sender"/>
+						<field name="google_folder_url" widget="url"/> 
+					</group>
+					</page>
+					   
 		                            <page string="Team" name="team">
+		                                <group>
 		                                <field colspan="4" name="members" widget="many2many_kanban" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_user']}">
 		                                    <kanban quick_create="false" create="true" delete="true">
 		                                        <field name="name"/>
@@ -100,6 +92,7 @@
 		                                        </templates>
 		                                    </kanban>
 		                                </field>
+		                                </group>
 		                            </page>
 		                            <page string="Other Info">
 		                                <group string="Administration">
@@ -134,9 +127,7 @@
                 
                 </form>
                 
-                
-              
-              </form>
+
 	  </field>
       </record>
       

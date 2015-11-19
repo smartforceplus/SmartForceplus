@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+  
+      <record model="ir.ui.view" id="tag_employee_dep_view">
+          <field name="name">tag_employee_dep_view</field>
+          <field name="model">hr.employee</field>
+          <field name="inherit_id" ref="hr.view_employee_form" />
+      	  <field name="arch" type="xml">
+      	      <notebook position="inside">
+      	          <page string="Departments">
+      	              <field name="x_departments"/>
+      	          </page>
+      	      </notebook>
+      	  </field>
+      </record>
+      
+    </data>
+</openerp>

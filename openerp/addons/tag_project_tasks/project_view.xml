@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="oe_right oe_button_box" name="buttons" groups="base.group_user">
-                         <button class="oe_inline oe_stat_button" type="action" attrs="{'invisible':[('use_tasks','=', 0)]}" name="141" icon="fa-tasks">
+                         <button class="oe_inline oe_stat_button" type="action" attrs="{'invisible':[('use_tasks','=', 0)]}" name="%(project.act_project_project_2_project_task_all)d" icon="fa-tasks">
                             <field string="Tasks" name="task_count" widget="statinfo"/>
                         </button>
                         <button class="oe_inline oe_stat_button" name="attachment_tree_view" type="object" icon="fa-files-o">
@@ -119,6 +119,13 @@
 										 <field name="message_follower_ids" widget="mail_followers" help="Follow this project to automatically track the events associated to tasks and issues of this project." groups="base.group_user"/>
 										 <field name="message_ids" widget="mail_thread"/>
 										 </div>
+		                            </page>
+		                            <page string="Task Details">
+		                            <group>  
+		                                <field name="url1"/>
+		                                <field name="url2"/>
+		                                <field name="url3"/>
+		                            </group>
 		                            </page>
                     
 									

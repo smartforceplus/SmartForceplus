@@ -15,3 +15,7 @@ class tag_project(models.Model):
     mass_mail = fields.Char(string='Mass Mail Address')
     mass_mail_sender = fields.Char(string='Mass Mail Sender')
     google_folder_url = fields.Char(string='Google Folder URL')
+    url1 = fields.Char(string='URL 1')
+    url2 = fields.Char(string='URL 2')
+    url3 = fields.Char(string='URL 3')
+    

@@ -5,8 +5,8 @@
     'category': "Tools",
     'data': [
     'email.template.csv',
-    'hr_employee.xml',
     'project_task.xml',
+    'hr_department.xml',
     ],
     'demo': [],
     'depends': ['project','hr','web'],

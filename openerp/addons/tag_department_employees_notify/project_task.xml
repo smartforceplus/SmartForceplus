@@ -10,6 +10,7 @@
       	  <field name="arch" type="xml">
       	      <field name="reviewer_id" position="after">
       	              <field name="x_dep"/>
+      	              <button name="notify_dep" type="object" string="Notify Department"/>
               </field>
       	  </field>
       </record>

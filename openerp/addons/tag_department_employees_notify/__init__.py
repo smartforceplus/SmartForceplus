@@ -1,1 +1,1 @@
-import project_task
+import hr_department, project_task

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record model="ir.ui.view" id="tag_affiliate">
+            <field name="name">Tag Affiliate</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+      	        <notebook position="inside">
+      	            <page string="Affiliate">
+      	                <group>
+      	                    <field name="affiliate"/>
+      	                    <field name="affiliate_cut"/>
+      	                </group>
+      	            </page>
+      	        </notebook>
+      	    </field>
+        </record>
+    </data>
+</openerp>

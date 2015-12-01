@@ -420,29 +420,30 @@ class google_calendar(osv.AbstractModel):
 
         if self.get_need_synchro_attendee(cr, uid, context=context):
             for google_attendee in single_event_dict.get('attendees', []):
-                if type == "write":
-                    for oe_attendee in event['attendee_ids']:
-                        if oe_attendee.email == google_attendee['email']:
-                            calendar_attendee_obj.write(cr, uid, [oe_attendee.id], {'state': google_attendee['responseStatus']}, context=context)
-                            google_attendee['found'] = True
-                            continue
+                if "email" in google_attendee:
+                    if type == "write":
+                        for oe_attendee in event['attendee_ids']:
+                            if oe_attendee.email == google_attendee['email']:
+                                calendar_attendee_obj.write(cr, uid, [oe_attendee.id], {'state': google_attendee['responseStatus']}, context=context)
+                                google_attendee['found'] = True
+                                continue
 
-                if google_attendee.get('found'):
-                    continue
+                    if google_attendee.get('found'):
+                        continue
 
-                attendee_id = res_partner_obj.search(cr, uid, [('email', '=', google_attendee['email'])], context=context)
-                if not attendee_id:
-                    data = {
-                        'email': google_attendee['email'],
-                        'customer': False,
-                        'name': google_attendee.get("displayName", False) or google_attendee['email']
-                    }
-                    attendee_id = [res_partner_obj.create(cr, uid, data, context=context)]
-                attendee = res_partner_obj.read(cr, uid, attendee_id[0], ['email'], context=context)
-                partner_record.append((4, attendee.get('id')))
-                attendee['partner_id'] = attendee.pop('id')
-                attendee['state'] = google_attendee['responseStatus']
-                attendee_record.append((0, 0, attendee))
+                    attendee_id = res_partner_obj.search(cr, uid, [('email', '=', google_attendee['email'])], context=context)
+                    if not attendee_id:
+                        data = {
+                            'email': google_attendee['email'],
+                            'customer': False,
+                            'name': google_attendee.get("displayName", False) or google_attendee['email']
+                        }
+                        attendee_id = [res_partner_obj.create(cr, uid, data, context=context)]
+                    attendee = res_partner_obj.read(cr, uid, attendee_id[0], ['email'], context=context)
+                    partner_record.append((4, attendee.get('id')))
+                    attendee['partner_id'] = attendee.pop('id')
+                    attendee['state'] = google_attendee['responseStatus']
+                    attendee_record.append((0, 0, attendee))
         for google_alarm in single_event_dict.get('reminders', {}).get('overrides', []):
             alarm_id = calendar_alarm_obj.search(
                 cr,

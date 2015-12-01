@@ -1,0 +1,1 @@
+v0.8 Add affiliate name and cut to product form view<br/>

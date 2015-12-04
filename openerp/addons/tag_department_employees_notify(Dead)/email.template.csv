@@ -1,2 +1,0 @@
-"id","name","subject","body_html","email_from","model_id/id","auto_delete"
-"email_department","Email Department","New Task","You have a new task for you department","${(object.user_id.email or object.company_id.email or 'noreply@' + object.company_id.name + '.com')|safe}","hr.model_hr_employee","false"

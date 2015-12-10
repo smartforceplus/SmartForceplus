@@ -1,0 +1,2 @@
+id,name,model,function,interval_number,interval_type,numbercall,active
+tag_daily_invoice_report,Daily Invoice Report (TAG),account.invoice,tag_email_unpaid_invoices,24,hours,-1,TRUE

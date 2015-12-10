@@ -11,6 +11,7 @@ class sms_response():
      delivary_state = ""
      response_string = ""
      human_read_error = ""
+     message_id = ""
 
 class twilio_core(models.Model):
 
@@ -49,24 +50,19 @@ class twilio_core(models.Model):
 	    sms_gateway_message_id = my_elements[0].text
             delivary_state = "successful"
         
-        #only record the sent sms/mms if it was successfully sent, multi send sms records it inconsiderate
-        if delivary_state == "successful":
-            my_model = self.env['ir.model'].search([('model','=',my_model_name)])
-	    my_field = self.env['ir.model.fields'].search([('name','=',my_field_name)])
-            esms_history = self.env['esms.history'].create({'field_id':my_field[0].id, 'record_id': my_record_id,'model_id':my_model[0].id,'account_id':sms_account.id,'from_mobile':format_from,'to_mobile':to_number,'sms_content':sms_content,'status_string':response_string.text, 'direction':'O','my_date':datetime.utcnow(), 'status_code':delivary_state, 'sms_gateway_message_id':sms_gateway_message_id, 'gateway_id': sms_account.account_gateway.id})
-        
         #send a repsonse back saying how the sending went
         my_sms_response = sms_response()
         my_sms_response.delivary_state = delivary_state
         my_sms_response.response_string = response_string.text
         my_sms_response.human_read_error = human_read_error
+        my_sms_response.message_id = sms_gateway_message_id
         return my_sms_response
 
     def check_messages(self, account_id, message_id=""):
-        _logger.error("check")
         sms_account = self.env['esms.accounts'].browse(account_id)
         
         if message_id != "":
+            payload = {}
             response_string = requests.get("https://api.twilio.com/2010-04-01/Accounts/" + sms_account.twilio_account_sid + "/Messages/" + message_id, data=payload, auth=(str(sms_account.twilio_account_sid), str(sms_account.twilio_auth_token)))
 	    root = etree.fromstring(str(response_string.text))
 	    my_messages = root.xpath('//Message')
@@ -123,14 +119,14 @@ class twilio_core(models.Model):
         my_message = self.env['esms.history'].search([('sms_gateway_message_id','=', sms_message.find('Sid').text)])
         if len(my_message) == 0 and sms_message.find('Direction').text == "inbound":
             #look for a partner with this number
-            partner_id = self.env['res.partner'].search([('mobile','=', sms_message.find('From').text)])
+            partner_id = self.env['res.partner'].search([('mobile_e164','=', sms_message.find('From').text)])
 	    if len(partner_id) > 0:
 	        record_id = partner_id[0]
 	    	target_model = "res.partner"
 	    	target_field = "mobile"
 	    else:
 	        #If you can't find a partner with that mobile number then look for a lead with that number
-	    	lead_id = self.env['crm.lead'].search([('mobile','=', sms_message.find('From').text)])
+	    	lead_id = self.env['crm.lead'].search([('mobile_e164','=', sms_message.find('From').text)])
 	    	if len(lead_id) > 0:
 	    	    record_id = lead_id[0]
 	    	    target_model = "crm.lead"
@@ -144,7 +140,9 @@ class twilio_core(models.Model):
 	    model_id = self.env['ir.model'].search([('model','=', target_model)])
 	    field_id = self.env['ir.model.fields'].search([('model_id.model','=',target_model), ('name','=', target_field)])
 	    twilio_gateway_id = self.env['esms.gateways'].search([('gateway_model_name', '=', 'esms.twilio')])
-	            
+	        
+	    self.env[target_model].search([('id','=', record_id.id)]).message_post(body=sms_message.find('Body').text, subject="SMS Received")
+	    
 	    #Create the sms record in history
 	    history_id = self.env['esms.history'].create({'account_id': account_id, 'status_code': "RECEIVED", 'gateway_id': twilio_gateway_id[0].id, 'from_mobile': sms_message.find('From').text, 'to_mobile': sms_message.find('To').text, 'sms_gateway_message_id': sms_message.find('Sid').text, 'sms_content': sms_message.find('Body').text, 'direction':'I', 'my_date':sms_message.find('DateUpdated').text, 'model_id':model_id.id, 'record_id':record_id, 'field_id':field_id.id})
                     
@@ -153,21 +151,22 @@ class twilio_core(models.Model):
         response_string = requests.get("https://api.twilio.com/2010-04-01/Accounts/" + my_account.twilio_account_sid + "/Messages/" + message_id, auth=(str(my_account.twilio_account_sid), str(my_account.twilio_auth_token)))
         root = etree.fromstring(str(response_string.text))
         
+        
         #map the Twilio delivary code to the esms delivary states 
 	delivary_state = ""
-	if root.xpath('//status')[0].text == "failed":
+	if root.xpath('//Status')[0].text == "failed":
 	    delivary_state = "failed"
-	elif root.xpath('//status')[0].text == "sent":
+	elif root.xpath('//Status')[0].text == "sent":
 	    delivary_state = "successful"
-	elif root.xpath('//status')[0].text == "delivered":
+	elif root.xpath('//Status')[0].text == "delivered":
 	    delivary_state = "DELIVRD"
-	elif root.xpath('//status')[0].text == "undelivered":
+	elif root.xpath('//Status')[0].text == "undelivered":
 	    delivary_state = "UNDELIV"
         
-        my_message = self.env['esms.history'].search(['sms_gateway_message_id','=', message_id])
+        my_message = self.env['esms.history'].search([('sms_gateway_message_id','=', message_id)])
         if len(my_message) > 0:
-            self.status_code = delivary_state
-            self.delivary_error_string = root.xpath('//ErrorMessage')[0].text        
+            my_message[0].status_code = delivary_state
+            my_message[0].delivary_error_string = root.xpath('//ErrorMessage')[0].text        
             
 class twilio_conf(models.Model):
 
@@ -187,12 +186,19 @@ class twilio_conf(models.Model):
             root = etree.fromstring(str(response_string_twilio_numbers.text))
 	    my_from_number_list = root.xpath('//IncomingPhoneNumber')
 	    for my_from_number in my_from_number_list:
+	        av_phone = my_from_number.xpath('//PhoneNumber')[0].text
 	        sid = my_from_number.xpath('//Sid')[0].text
+	        
+                    
+                #create a unverified number
+                if self.env['esms.verified.numbers'].search_count([('mobile_number','=',av_phone)]) == 0:
+                    vsms = self.env['esms.verified.numbers'].create({'name': av_phone, 'mobile_number': av_phone,'account_id':self.id, 'mobile_verified': False})
+	            vsms.send_mobile_verify()
 	        
 	        payload = {'SmsUrl': str(request.httprequest.host_url + "sms/twilio/receive")}
 	        requests.post("https://api.twilio.com/2010-04-01/Accounts/" + self.twilio_account_sid + "/IncomingPhoneNumbers/" + sid, data=payload, auth=(str(self.twilio_account_sid), str(self.twilio_auth_token)))
                 
-	    raise osv.except_osv(("Setup Successful"), ("All Done"))
+	    #raise osv.except_osv(("Setup Successful"), ("All Done"))
         else:
             raise osv.except_osv(("Setup Failed"), ("Bad Credentials"))
 

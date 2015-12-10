@@ -1,0 +1,2 @@
+id,name,subject,body_html,email_from,model_id/id,auto_delete,email_to
+tag_report_unpaid_invoices,Unpaid Invoices email (TAG),List of unpaid invoices,"Hi ${object.name},<br/>Here is a list of unpaid invoices",${(object.user_id.email or object.company_id.email or 'noreply@' + object.company_id.name + '.com')|safe},base.model_res_partner,FALSE,${object.email}

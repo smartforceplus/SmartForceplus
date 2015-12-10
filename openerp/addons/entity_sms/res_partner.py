@@ -8,8 +8,9 @@ from datetime import datetime
 class res_partner_esms(models.Model):
 
     _inherit = "res.partner"
-    
-    mobile_e164 = fields.Char(string="Mobile e164", compute='_calc_e164')
+
+    sms_opt_out = fields.Boolean(string="SMS Opt Out", help="If true the partner can't be sent mass sms, regular sms is stil fine though")    
+    mobile_e164 = fields.Char(string="Mobile e164", store=True, compute='_calc_e164')
 
     @api.one
     @api.depends('country_id','mobile')
@@ -21,3 +22,5 @@ class res_partner_esms(models.Model):
                 self.mobile_e164 = self.mobile
             else:
                 self.mobile_e164 = self.country_id.mobile_prefix + self.mobile
+        else:
+            self.mobile_e164 = self.mobile

@@ -7,7 +7,6 @@
     'data': [
         'ir.cron.csv',
         'esms_core.xml',
-        'res_partner.xml',
         'esms_history.xml',
         'esms_accounts.xml',
         'esms_templates.xml',

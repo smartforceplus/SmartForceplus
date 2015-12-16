@@ -16,11 +16,16 @@ class res_partner_esms(models.Model):
     @api.depends('country_id','mobile')
     def _calc_e164(self):
         if self.mobile and self.country_id and self.country_id.mobile_prefix:
+            
+            temp_e164 = ""
             if self.mobile.startswith("0"):
-                self.mobile_e164 = self.country_id.mobile_prefix + self.mobile[1:]
+                temp_e164 = self.country_id.mobile_prefix + self.mobile[1:]
             elif self.mobile.startswith("+"):
-                self.mobile_e164 = self.mobile
+                temp_e164 = self.mobile
             else:
-                self.mobile_e164 = self.country_id.mobile_prefix + self.mobile
+                temp_e164 = self.country_id.mobile_prefix + self.mobile
+            
+            self.mobile_e164 = temp_e164.replace(" ","")
+            
         else:
             self.mobile_e164 = self.mobile

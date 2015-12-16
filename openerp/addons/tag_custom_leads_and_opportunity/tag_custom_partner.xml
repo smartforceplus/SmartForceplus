@@ -102,7 +102,7 @@
 							<field name="referred_by" invisible="0"/>
 							<field name="referred_web_link" invisible="0" widget="url"/>
 							<field name="referral_web_link" invisible="0" widget="url"/>
-							<field name="category_id" widget="many2many_tags" placeholder="Tags..."/>
+							<field name="category_id" widget="many2many_tags" string="Segments" placeholder="Segments..."/>
                             
                         </group>
                     </group>
@@ -214,7 +214,7 @@
                                             <div class="oe_title">
 					        <label for="name" class="oe_edit_only"/>
 					        <h1><field name="name" style="width: 70%"/></h1>
-					        <field name="category_id" widget="many2many_tags" placeholder="Tags..." style="width: 70%"/>
+					        <field name="category_id" widget="many2many_tags" string="Segments" placeholder="Segments..." style="width: 70%"/>
                                                 <br />
                                                 <br />
                                             </div>

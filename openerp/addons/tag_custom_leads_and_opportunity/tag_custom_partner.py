@@ -20,7 +20,7 @@ class tag_customer_tabs(osv.osv):
         'city_n': fields.char('City', select=True, track_visibility='always'),
         'state_id_n': fields.many2one("res.country.state", 'State', ondelete='restrict', select=True, track_visibility='always'),
         'country_id_n': fields.many2one('res.country', 'Country', ondelete='restrict', select=True, track_visibility='always'),
-        'email_form': fields.char('Email', select=True, track_visibility='always'),
+        'email_form': fields.char('Email(Dead)', select=True, track_visibility='always'),
         'phone_num': fields.char('Phone', select=True, track_visibility='always'),
         'fax_num': fields.char('Fax', select=True, track_visibility='always'),
         'tag_crm_states': fields.selection([('1','Lead'), ('2','Customer'),('3','Referral')], 'Contact Status'),
@@ -29,7 +29,7 @@ class tag_customer_tabs(osv.osv):
         'date_deadline': fields.date('Expected Closing', help="Estimate of the date on which the opportunity will be won.", select=True, track_visibility='always'),
         'date_action': fields.date('Next Action Date', select=True, track_visibility='always'),
         'priority': fields.selection(crm.AVAILABLE_PRIORITIES, 'Priority', select=True, track_visibility='always'),
-        'categ_ids': fields.many2many('crm.case.categ', 'res_partner_category_rel', 'partner_id', 'category_id', 'Tags', \
+        'categ_ids': fields.many2many('crm.case.categ', 'res_partner_category_rel', 'partner_id', 'category_id', 'segments(old)', \
             domain="['|', ('section_id', '=', section_id), ('section_id', '=', False), ('object_id.model', '=', 'crm.lead')]", select=True, track_visibility='always'),
         'title_action': fields.char('Next Action', select=True, track_visibility='always'),
         'company_currency': fields.related('company_id', 'currency_id', type='many2one', string='Currency', readonly=True, relation="res.currency"),

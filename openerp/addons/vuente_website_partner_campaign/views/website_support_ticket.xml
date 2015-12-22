@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="vwpc_thank_you" name="VWPC Thank You" page="True">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Thank You</h1>
+                            <h3 class="text-muted text-center">We will get back to you shortly</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </t>
+</template>
+
+<template id="vwpc_sign_up" name="VWPC Sign Up" page="True">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-center">Sign up to campaign</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <form action="/vwpc/process" method="post" class="form-horizontal mt32" enctype="multipart/form-data">
+            <div t-attf-class="form-group #{error and 'name' in error and 'has-error' or ''}">
+                <label class="col-md-3 col-sm-4 control-label" for="name">Name</label>
+                <div class="col-md-7 col-sm-8">
+                    <input type="text" class="form-control" name="name" required="True" t-attf-value="#{name or ''}"/>
+                </div>
+            </div>
+            
+            <div name="email_container" t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+                <label class="col-md-3 col-sm-4 control-label" for="email">Email</label>
+                <div class="col-md-7 col-sm-8">
+                    <input type="email" class="form-control" name="email" required="True" t-attf-value="#{email or ''}"/>
+                </div>
+            </div>
+            
+            <div name="system_container" t-attf-class="form-group #{error and 'system' in error and 'has-error' or ''}">
+	        <label class="col-md-3 col-sm-4 control-label" for="system">Campaign</label>
+	        <div class="col-md-7 col-sm-8">
+	            <select class="form-control" name="campaign" required="True">
+	                <t t-foreach="camp" t-as="camp_tag">
+			    <option t-attf-value="#{camp_tag.id}"><t t-esc="camp_tag.name"/></option>
+                        </t>	                
+	            </select>
+	        </div>
+            </div>
+
+            <div name="TF10_container" t-attf-class="form-group #{error and 'TF10' in error and 'has-error' or ''}">
+                <label class="col-md-3 col-sm-4 control-label" for="TF10">Site or Portal Name</label>
+                <div class="col-md-7 col-sm-8">
+                    <input type="text" class="form-control" name="TF10" required="True" t-attf-value="#{TF10 or ''}"/>
+                </div>
+            </div>        
+            
+            
+            <div class="form-group">
+                <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                    <button class="btn btn-primary btn-lg">Campaign Sign Up</button>
+                </div>
+            </div>
+        </form>
+
+      </div>
+    </t>
+    
+</template>
+
+</data>
+</openerp>

@@ -18,8 +18,8 @@
 					<field name="function" invisible="1"/>
 					<field name="mobile" invisible="0"/>
                     <field name="phone" invisible="0"/>
-                    <field name="email" invisible="1"/>
-                    <field name="user_id" invisible="0"/>
+                    <field name="email" invisible="0"/>
+                    <field name="user_id" invisible="1"/>
                     <field name="is_company" invisible="1"/>
                     <field name="country_id" invisible="1"/>
 					<field name="status" invisible="0"/>

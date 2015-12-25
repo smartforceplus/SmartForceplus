@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+       <record id="teste_smart" model="ir.actions.act_url">
+                <field name="name">Smart Support</field>
+                <field name="type">ir.actions.act_url</field>
+                <field name="target">new</field>
+                <field name="url">/vuente/support</field>
+        </record>
+        
+      <menuitem action="teste_smart" id="vss_smart_support" name="Contact Us" sequence="1010"/>
+ 
+    </data>
+</openerp>

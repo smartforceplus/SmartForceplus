@@ -25,7 +25,7 @@ class MyController(http.Controller):
             values[field_name] = field_value
         
         #Create the customer
-        res_partner = request.env['res.partner'].create({'name':values['name'] + " (Email Campaign)", 'TF10': values['TF10'],'email':values['email'], 'category_id':values['campaign']})
+        res_partner = request.env['res.partner'].create({'name':values['name'], 'TF10': values['TF10'],'email':values['email'], 'category_id':values['campaign']})
         
                 
         request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(values['campaign']) + ',' + str(res_partner.id) + ')')

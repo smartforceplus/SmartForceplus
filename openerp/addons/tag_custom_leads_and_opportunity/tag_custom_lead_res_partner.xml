@@ -259,7 +259,7 @@
 	                                    <field name="message_ids" widget="mail_thread"/>	                                
 	                                </div>
 	                            </page>						
-							<page string="Smart Force Plus">
+							<page string="Vuente Site">
 								<group>
 									<group string="Subscriber">
 										<field name="TF10" string="BRM Site" widget="url"/>

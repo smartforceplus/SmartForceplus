@@ -24,14 +24,26 @@ class MyController(http.Controller):
         #populate an array which has ONLY the fields that are in the form (prevent injection)
         for fi in rl[0].fields_ids:
             secure_values[fi.name] = values[fi.name]
+
+        existing_res_partner = request.env['res.partner'].search([('email','=',values['email'])])
         
-        new_lead_id = request.registry['res.partner'].create(request.cr, SUPERUSER_ID, secure_values)
+        _logger.error(len(existing_res_partner))
         
-        request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(rl[0].tag_id.id) + ',' + str(new_lead_id) + ')')
+        partner_id = 0
+        if len(existing_res_partner) > 0:
+            partner_id = existing_res_partner[0]
+        else:
+            #Create the customer
+            new_partner = request.registry['res.partner'].create(request.cr, SUPERUSER_ID, secure_values)
+            partner_id = new_partner
+        
+        
+        _logger.error(partner_id)
+        
+        #Add the campaign tag
+        request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(rl[0].tag_id.id) + ',' + str(partner_id) + ')')
         
         #send them an email
-        _logger.error(rl[0].template_id.id)
-        _logger.error(new_lead_id)
         mail_values = request.registry['email.template'].generate_email(request.cr, SUPERUSER_ID, rl[0].template_id.id, new_lead_id)
         mail = request.registry['mail.mail'].create(request.cr, SUPERUSER_ID, mail_values)
         request.registry['mail.mail'].send(request.cr, SUPERUSER_ID, [mail])

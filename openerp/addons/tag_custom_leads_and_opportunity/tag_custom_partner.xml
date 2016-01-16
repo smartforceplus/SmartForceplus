@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-<!--Customers Tree View-->
-			<record model="ir.ui.view" id="base.view_partner_tree">
-					<field name="name">res.partner.tree</field>
-					<field name="model">res.partner</field>
-					<field eval="1" name="priority"/>
-					<field name="arch" type="xml">
-			<tree string="Partners" >
-					<field name="date_action" invisible="0"/>
-					<field name="title_action" invisible="0"/>			
-					<field name="display_name" invisible="1"/>
-					<field name="name" string="Name" invisible="0"/>
-					<field name="lastname" string="Last Name" invisible="0"/>
-					<field name="parent_id" invisible="0"/>
-					<field name="function" invisible="1"/>
-					<field name="mobile" invisible="0"/>
+    
+        <!--Customers Tree View-->
+	<record model="ir.ui.view" id="vuente_view_partner_tree">
+	    <field name="name">res.partner.tree Vuente</field>
+	    <field name="model">res.partner</field>
+	    <field eval="1" name="priority"/>
+	    <field name="inherit_id" ref="base.view_partner_tree"/>
+	    <field name="arch" type="xml">
+	        <tree string="Partners">
+	            <field name="date_action" invisible="0"/>
+	            <field name="title_action" invisible="0"/>			
+	            <field name="display_name" invisible="1"/>
+	            <field name="name" string="Name" invisible="0"/>
+		    <field name="lastname" string="Last Name" invisible="0"/>
+		    <field name="parent_id" invisible="0"/>
+		    <field name="function" invisible="1"/>
+		    <field name="mobile" invisible="0"/>
                     <field name="phone" invisible="0"/>
-                    <field name="email" invisible="0"/>
+                    <field name="email" invisible="1"/>
                     <field name="user_id" invisible="0"/>					
-					<field name="free_member" string="VIP Club" invisible="0"/>
+		    <field name="free_member" string="VIP Club" invisible="1"/>
                     <field name="is_company" invisible="1"/>
                     <field name="country_id" invisible="1"/>
                     <field name="parent_id" invisible="1"/>
-			</tree>
-				</field>
-			</record>
-<!--Customer Form View-->	
+		</tree>
+	    </field>
+	</record>
+	
+    <!--Customer Form View-->
+<!--
+    <record model="ir.ui.view" id="vuente_view_partner_form">
+	<field name="name">res.partner.form Vuente</field>
+	<field name="model">res.partner</field>
+	<field eval="1" name="priority"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+-->
+
     <record model="ir.ui.view" id="base.view_partner_form">
-	<field name="name">res.partner.form</field>
+	<field name="name">res.partner.form Vuente</field>
 	<field name="model">res.partner</field>
 	<field eval="1" name="priority"/>
 	<field name="arch" type="xml">
-	
-<form string="Partners">
-	        <header>	    
-                </header>
+            <form string="Partners">
                 <sheet>
                     <field name="image" widget="image" class="oe_left oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
                     <div class="oe_title oe_left">
@@ -45,13 +53,8 @@
                         </div>
                         <h1>
                             <field name="name" default_focus="1" placeholder="Name"/>
-							<field name="lastname" placeholder="Last Name" attrs="{'invisible': [('is_company','=', True)]}"/>
+			    <field name="lastname" placeholder="Last Name" attrs="{'invisible': [('is_company','=', True)]}"/>
                         </h1>						
-	                                    <group>
-											<field name="tag_crm_states" invisible="1"/>
-											<field name="date_action" invisible="0"/>
-											<field name="title_action" invisible="0"/>
-	                                    </group>
 
                     </div>
                     <div class="oe_right oe_button_box" name="buttons">
@@ -62,7 +65,7 @@
 		        <page string="Details">
                     <group>
                         <group>
-							<field name="parent_id" placeholder="Company" domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', True),('parent_id', '=', False)]}" on_change="onchange_address(use_parent_address, parent_id)"/>
+			    <field name="parent_id" placeholder="Company" domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', True),('parent_id', '=', False)]}" on_change="onchange_address(use_parent_address, parent_id)"/>
                             <label for="type" attrs="{'invisible': [('parent_id','=', False)]}"/>
                             <div attrs="{'invisible': [('parent_id','=', False)]}" name="div_type">
                                 <field class="oe_inline" name="type"/>
@@ -87,8 +90,11 @@
 							</div>
                             
                             <field name="industry" invisible="0"/>
-							<field name="TF2" invisible="0"/>
-                            <field name="TF3" invisible="0"/>
+                        
+			    			    <field name="tag_crm_states" invisible="0"/>
+			    			    <field name="date_action" invisible="0"/>
+			    			    <field name="title_action" invisible="0"/>
+                        
                         </group>
                         <group>
                             
@@ -102,7 +108,7 @@
 							<field name="referred_by" invisible="0"/>
 							<field name="referred_web_link" invisible="0" widget="url"/>
 							<field name="referral_web_link" invisible="0" widget="url"/>
-							<field name="category_id" widget="many2many_tags" string="Segments" placeholder="Segments..."/>
+							<field name="category_id" widget="many2many_tags" placeholder="Tags..."/>
                             
                         </group>
                     </group>
@@ -110,7 +116,7 @@
 
                     </page>
 	
-	<page string="Communications">
+	            <page string="Communications">
 				        <field name="comment" placeholder="Put an internal note..."/>	
 				        <!--<button name='%(mail.action_email_compose_message_wizard)d' string="Send Email" type="action" class="oe_highlight"  />-->
 	                                <div class="oe_chatter">
@@ -119,16 +125,7 @@
 	                                    <field name="message_ids" widget="mail_thread"/>
 	                                
 	                                </div>
-	                            </page>
-<page string="Site and Portal Detail">
-								<group>
-									<group string="Subscriber">
-										<field name="TF10" string="BRM Site" widget="url"/>
-										<field name="TF13" string="Temporary User Name"/>
-										<field name="TF11" string="Temporary Password"/>
-									</group>
-									</group>
-                            </page>								
+	                            </page>		
 	                            <page name="sales_purchases" string="Sales &amp; Purchases">
 	                                <group>
 	                                    <group>
@@ -149,13 +146,13 @@
 	                                    </group>
 	                                </group>
                             </page>		
-                         		
+                            
                         <page string="Contacts" attrs="{'invisible': [('is_company','=',False), ('child_ids', '=', [])]}">
                             <field name="child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True}">
                                 <kanban>
                                     <field name="color"/>
                                     <field name="name"/>
-									<field name="lastname"/>
+				    <field name="lastname"/>
                                     <field name="title"/>
                                     <field name="email"/>
                                     <field name="parent_id"/>
@@ -217,13 +214,13 @@
                                         </t>
                                     </templates>
                                 </kanban>
-                                    <form string="Contact" invisable="0">
+                                    <form string="Contact" invisible="0">
                                         <sheet>
                                             <field name="image" widget="image" class="oe_avatar oe_left" options="{&quot;preview_image&quot;: &quot;image_medium&quot;}"/>
                                             <div class="oe_title">
 					        <label for="name" class="oe_edit_only"/>
 					        <h1><field name="name" style="width: 70%"/></h1>
-					        <field name="category_id" widget="many2many_tags" string="Segments" placeholder="Segments..." style="width: 70%"/>
+					        <field name="category_id" widget="many2many_tags" placeholder="Tags..." style="width: 70%"/>
                                                 <br />
                                                 <br />
                                             </div>
@@ -234,12 +231,6 @@
                                                 <field name="phone"/>
                                                 <field name="mobile"/>
                                             </group>
-											<group>
-												<field name="TF5" string="Birthdate"/>
-												<field name="TF6" string="Licence Number"/>
-												<field name="TF7" string="Passport Number"/>
-												<field name="TF8" string="M/F"/>										
-											</group>
 											</group>
                                             <div>
                                                 <field name="use_parent_address"/><label for="use_parent_address"/>
@@ -269,95 +260,10 @@
                                     </form>
                                 </field>
                             </page>
-<!--<page string="Assetts and Liabilities">
-								<group>
-									<group string="Assetts">
-										<field name="T1F4" string="Cash at Bank"/>
-										<field name="T1F5" string="Residential Property"/>
-										<field name="T1F6" string="Property 1"/>
-										<field name="T1F7" string="Property 2"/>
-										<field name="T1F8" string="Property 3"/>
-										<field name="T1F9" string="Other Investments"/>
-										<field name="T1F10" string="Fixtures and Fittings"/>
-										<field name="T1F11" string="Furniture"/>
-										<field name="T1F12" string="Superannuation"/>
-										<field name="T1F13" string="TDP Cover"/>
-										<field name="T1F14" string="Trauma"/>
-										<field name="T1F15" string="Income Protect"/>
-										<field name="T1F16" string="Life Insurance"/>
-										<field name="T1F17" string="Shares"/>
-										<field name="T1F18" string="Plant and Equip"/>
-										<field name="T1F17" string="Motor Vehicle"/>
-										<field name="T1F18" string="Bike/Van/Boat"/>
-										<field name="T1F19" string="Valuables"/>
-										<field name="T1F20" string="Business Val"/>
-										<field name="T1F20" string="Total Assetts"/>
-										
-									</group>
-									<group string="Liabilities">	
-										<field name="T1F21" string="Overdraught"/>
-										<field name="T1F22" string="Residential Property"/>
-										<field name="T1F23" string="Property 1"/>
-										<field name="T1F24" string="Property 2"/>
-										<field name="T1F25" string="Property 3"/>
-										<field name="T1F26" string="Other Investments"/>
-										<field name="T1F27" string="Credit Cards"/>
-										<field name="T1F28" string="Plant and Equip"/>
-										<field name="T1F29" string="Motor Vehicle"/>
-										<field name="T1F30" string="Bike/Van/Boat"/>
-										<field name="T1F31" string="Total Liabilities"/>
-									</group>
-								</group>
-	                        </page>
-							<page string="List View">
-								<field name="TagPartnerList01" context="{'tag_partnerlist1_id': active_id}">
-								<tree string="Blocked Members" editable="top">
-									<field name="TagList101" string="Lender Name"/>
-									<field name="TagList102" string="Reference Number"/>
-									<field name="TagList103" string="Term"/>
-									<field name="TagList105" string="Rate %"/>
-									<field name="TagList104" string="Broker"/>	
-									<field name="TagList106" string="Trident Fee"/>
-									<field name="TagList107" string="Doc Fee"/>														
-								</tree>
-								</field>
-	                        </page>-->
-							<page string="Personal Details" attrs="{'invisible': [('is_company','=',True)]}">
-									<group>
-									<group>
-										<field name="TF5" string="Middle Name"/>
-										<field name="TF9" string="Birthdate"/>
-										<field name="TF6" string="Licence Number"/>
-										</group>
-										<group>
-										<field name="TF7" string="Passport Number"/>
-										<field name="TF8" string="M/F"/>										
-									</group>
-									</group>
-									<group>
-									<group string="Subscriber">
-										<field name="TF10" string="BRM Site" widget="url"/>
-										<field name="TF13" string="Temporary User Name"/>
-										<field name="TF11" string="Temporary Password"/>
-										</group>
-										<group>
-
-									
-									</group>
-									</group>
-	                        </page>
-							<!--<page string="LT2">
-								<field name="TagPartnerList02" context="{'tag_partnerlist2_id': active_id}">
-								<tree string="Blocked Members" editable="top">
-									<field name="TagList201" string="LTF201"/>
-									<field name="TagList202" string="LTF202"/>
-									<field name="TagList203" string="LTF203"/>
-									<field name="TagList204" string="LTF204"/>
-									<field name="TagList205" string="LTF205"/>	
-									<field name="TagList206" string="LTF206"/>	
-								</tree>
-								</field>									
-	                        </page>--> 		
+			    <page string="Personal Details" attrs="{'invisible': [('is_company','=',True)]}">
+		                <group>
+				</group>
+	                    </page> 		
                         </notebook>
                         </sheet>
                     </form>

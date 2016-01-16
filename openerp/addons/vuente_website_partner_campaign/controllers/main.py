@@ -24,10 +24,18 @@ class MyController(http.Controller):
 	for field_name, field_value in kwargs.items():
             values[field_name] = field_value
         
-        #Create the customer
-        res_partner = request.env['res.partner'].create({'name':values['name'], 'TF10': values['TF10'],'email':values['email'], 'category_id':values['campaign']})
         
+        existing_res_partner = request.env['res.partner'].sudo().search([('email','=',values['email'])])
+	        	        
+	partner_id = 0
+	if len(existing_res_partner) > 0:
+	    partner_id = existing_res_partner[0].id
+	else:
+	    #Create the customer
+	    res_partner = request.env['res.partner'].sudo().create({'name':values['name'], 'TF10': values['TF10'],'email':values['email'], 'category_id':values['campaign']})
+	    partner_id = res_partner.id
+	                
                 
-        request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(values['campaign']) + ',' + str(res_partner.id) + ')')
+        request.cr.execute('INSERT INTO res_partner_res_partner_category_rel VALUES(' + str(values['campaign']) + ',' + str(partner_id) + ')')
         
         return werkzeug.utils.redirect("/vwpc/thankyou")

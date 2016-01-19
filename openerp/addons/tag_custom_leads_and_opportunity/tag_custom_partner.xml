@@ -103,12 +103,13 @@
                             <field name="fax"/>
                             <field name="user_ids" invisible="1"/>
                             <field name="email" widget="email" attrs="{'required': [('user_ids','!=', [])]}"/>
-							<field name="website" widget="url" placeholder="e.g. www.smartforceplus.com"/>
+							<field name="website" widget="url" placeholder="e.g. www.vuente.com"/>
                             <field name="title" options="{&quot;no_open&quot;: True}" invisible="1"/>
 							<field name="referred_by" invisible="0"/>
 							<field name="referred_web_link" invisible="0" widget="url"/>
 							<field name="referral_web_link" invisible="0" widget="url"/>
 							<field name="category_id" widget="many2many_tags" placeholder="Tags..."/>
+							<field name="TF10" string="Vuente System Name" widget="url" invisible="0"/>
                             
                         </group>
                     </group>

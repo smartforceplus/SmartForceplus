@@ -32,7 +32,7 @@ class MyController(http.Controller):
 	    partner_id = existing_res_partner[0].id
 	else:
 	    #Create the customer
-	    res_partner = request.env['res.partner'].sudo().create({'name':values['name'], 'TF10': values['TF10'],'email':values['email'], 'category_id':values['campaign']})
+	    res_partner = request.env['res.partner'].sudo().create({'name':values['name'], 'TF10': values['TF10'],'email':values['email'],'mobile':values['mobile'], 'category_id':values['campaign']})
 	    partner_id = res_partner.id
 	                
                 

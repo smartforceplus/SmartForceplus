@@ -24,6 +24,7 @@ class tag_customer_tabs(osv.osv):
 		'referred_web_link': fields.char('Referred Web Link', size=100),
 		'referral_web_link': fields.char('Referral Web Link', size=100),
 		'referred_by': fields.char('Referred By', size=50),
+		'TF10' :fields.char('Vuente Instance Name', size=50),
         'TF1': fields.char('Data Upload ID', size=15),
 		'abn': fields.char('ABN', size=30), 
 		'acn': fields.char('ACN', size=30),

@@ -2,6 +2,7 @@ from openerp import models, fields, api
 from datetime import datetime, timedelta
 import openerp
 import pytz
+from openerp.http import request
 from pytz import timezone
 
 import logging
@@ -21,7 +22,7 @@ class tag_project_task_email(models.Model):
 	    for pp in self.x_dep.employee_ids:
 	        values = self.env['email.template'].generate_email(notification_template, pp.id)   
 	        values['email_to'] = pp.work_email
-	        values['body_html'] += "<a href='http://www.smartforceplus.com/web?id=" + str(self.x_dep.id) + "&view_type=form&model=hr.department&menu_id=528&action=661'>View Department Tasks</a>" 
+	        values['body_html'] += "<a href='" + request.httprequest.host_url + "/web#id=" + str(self.x_dep.id) + "&view_type=form&model=project.task&menu_id=176&action=199'>You can view the task here</a>" 
 	        msg_id = self.env['mail.mail'].create(values)
                 self.env['mail.mail'].send([msg_id], True)
         

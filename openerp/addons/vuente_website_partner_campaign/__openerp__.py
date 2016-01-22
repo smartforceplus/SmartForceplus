@@ -9,6 +9,6 @@
         'views/website_support_ticket.xml',
         ],
     'demo': [],
-    'depends': ['web', 'crm', 'website'],
+    'depends': ['web', 'crm', 'website','marketing_campaign'],
     'installable': True,
 }

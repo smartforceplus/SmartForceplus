@@ -1,0 +1,105 @@
+Return-path: <bounce-md_30754045.569df6f1.v1-cef7c14239a44318a2d50eba3afd02ea@mandrillapp.com>
+Envelope-to: anthony@vuente.org
+Delivery-date: Tue, 19 Jan 2016 02:42:25 -0600
+Received: from mail128-130.atl41.mandrillapp.com ([198.2.128.130]:58340)
+ by gator3236.hostgator.com with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+ (Exim 4.85) (envelope-from
+ <bounce-md_30754045.569df6f1.v1-cef7c14239a44318a2d50eba3afd02ea@mandrillapp.com>)
+ id 1aLRrt-000P3m-M0
+ for anthony@vuente.org; Tue, 19 Jan 2016 02:42:25 -0600
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill;
+ d=anthonygardiner.com; 
+ h=From:Subject:Message-Id:Reply-To:To:Date:MIME-Version:Content-Type;
+ i=anthony@anthonygardiner.com; 
+ bh=ykjtLpSv2V1fDdiVowxrNiuIK+g=;
+ b=iKUr1jWxZkCvg3DmXE+IPhygYj3q6y6qC84tisNWYNh7g/6Zb+ywzcdcSLzID6lrgGvtcgctXAi7
+ FH5IK+Nn+DYojO3ZKyGsjYSvS/YFf1cpbK+Di+LPNJIHZFFfFPr8ii1/5tRP1D4zG8qE9FwAxQ4F
+ qfLL5hTDmSacKIpZ9Nc=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill;
+ d=anthonygardiner.com; 
+ b=qvcSfBVBmQmD/ObC4KI6Cfg+Ibf1z0Q1VnQXmORczrp9o0ApDLQPemzyuZsYtmQruAz0Yrrzd3u0
+ bpspRO1PxvXvLQhBydh1Z8uksnfiCksTxwm4PvKx2npbGWsam1N7Lwiz9YDHmzn4qr/DqVws1BaG
+ OiTLJmspPJTlg0J7v4U=;
+Received: from pmta01.mandrill.prod.atl01.rsglab.com (127.0.0.1) by
+ mail128-130.atl41.mandrillapp.com id hjnrf41mquk2 for <anthony@vuente.org>;
+ Tue, 19 Jan 2016 08:42:25 +0000 (envelope-from
+ <bounce-md_30754045.569df6f1.v1-cef7c14239a44318a2d50eba3afd02ea@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1453192945; h=From : 
+ Subject : Message-Id : Reply-To : To : Date : MIME-Version : 
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=rciFeTQ4Y5pIrzH4R6ZWAU+jVFCWEHYI7dylxAMmOwI=; 
+ b=BtxNvv/0oVxAyMv/j+fUrEjHwXXcrcrwIifcM8nXdoW2gXCUnw9fsDa0MqQTkgjr+NUyXp
+ dkcXXC724AV5D6ubdCHaYSMIzOAQu0iTAMVDo+qyPHfZri5UbTghO6WPtRQg2lxPsVbWPlwT
+ 06h/B7Jq2JWsJ6aZUEKCFUaYj3MrY=
+From: Anthony Gardiner <anthony@anthonygardiner.com>
+Subject: Anthony Gardiner invitation to connect on Odoo
+Received: from [136.243.49.32] by mandrillapp.com id
+ cef7c14239a44318a2d50eba3afd02ea; Tue, 19 Jan 2016 08:42:25 +0000
+Message-Id: <1453192943.377228975296021.378688298863525-openerp-53-res.users@jahacapty>
+Reply-To: Anthony Gardiner <anthony@anthonygardiner.com>
+To: <anthony@vuente.org>
+X-Report-Abuse: Please forward a copy of this message, including all headers,
+ to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here:
+ http://mandrillapp.com/contact/abuse?id=30754045.cef7c14239a44318a2d50eba3afd02ea
+X-Mandrill-User: md_30754045
+Date: Tue, 19 Jan 2016 08:42:25 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-y_rBdSy5VImbzvTk8y5mOA"
+
+--_av-y_rBdSy5VImbzvTk8y5mOA
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+
+Anthony at Vuente,
+
+You have been invited to connect to "Anthony Gardiner" in order to get access to your documents in Odoo.
+
+To accept the invitation, click on the following link:
+
+Accept invitation to "Anthony Gardiner" [1]
+
+Thanks,
+
+--
+Anthony Gardiner
+anthony@anthonygardiner.com
+0497 389 848
+
+
+
+[1] http://vuente.org/web/reset_password?token=rxApKOlQq4uqLQPlwAMl&db=smartforceplus
+
+--_av-y_rBdSy5VImbzvTk8y5mOA
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<base href="http://vuente.org">
+<p>
+                        Anthony at Vuente,
+                    </p>
+                    <p>
+                        You have been invited to connect to "Anthony Gardiner" in order to get access to your documents in Odoo.
+                    </p>
+                    <p>
+                        To accept the invitation, click on the following link:
+                    </p>
+                    <ul>
+                        <li><a href="http://mandrillapp.com/track/click/30754045/vuente.org?p=eyJzIjoiWlEzTUVoOG5RSnQwajFoU0VrZXR1LUJkZ3lrIiwidiI6MSwicCI6IntcInVcIjozMDc1NDA0NSxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvdnVlbnRlLm9yZ1xcXC93ZWJcXFwvcmVzZXRfcGFzc3dvcmQ_dG9rZW49cnhBcEtPbFFxNHVxTFFQbHdBTWwmZGI9c21hcnRmb3JjZXBsdXNcIixcImlkXCI6XCJjZWY3YzE0MjM5YTQ0MzE4YTJkNTBlYmEzYWZkMDJlYVwiLFwidXJsX2lkc1wiOltcIjM0NzFiZGU3ZjYwMDQxZTY4YThhYTliMzU2NjRlZTY5NzFlMTM5OGVcIl19In0">Accept invitation to "Anthony Gardiner"</a></li>
+                    </ul>
+                    <p>
+                        Thanks,
+                    </p>
+                    <pre>
+--
+Anthony Gardiner
+anthony@anthonygardiner.com
+0497 389 848
+                    </pre>
+                
+            
+<img src="http://mandrillapp.com/track/open.php?u=30754045&id=cef7c14239a44318a2d50eba3afd02ea" height="1" width="1">
+--_av-y_rBdSy5VImbzvTk8y5mOA--
+

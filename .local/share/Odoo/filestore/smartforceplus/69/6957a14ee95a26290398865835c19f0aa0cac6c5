@@ -1,0 +1,177 @@
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+var CKEDITOR_BASEPATH='/web/static/lib/ckeditor/';;
+
+/* /web/static/lib/select2/select2.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/select2/select2.js defined in bundle 'website.assets_editor'.");;
+
+/* /web/static/lib/ckeditor/ckeditor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/ckeditor/ckeditor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/ace.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/ace.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/theme-monokai.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/theme-monokai.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/mode-xml.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/mode-xml.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/vkbeautify/vkbeautify.0.99.00.beta.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/vkbeautify/vkbeautify.0.99.00.beta.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/jQuery.transfo.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/jQuery.transfo.js defined in bundle 'website.assets_editor'.");;
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+$.fn.bstooltip=$.fn.tooltip;$.fn.bsbutton=$.fn.button;;
+
+/* /web/static/lib/jquery.ui/js/jquery-ui-1.9.1.custom.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/jquery.ui/js/jquery-ui-1.9.1.custom.js defined in bundle 'website.assets_editor'.");;
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+$.fn.tooltip=$.fn.bstooltip;$.fn.button=$.fn.bsbutton;;
+
+/* /website/static/lib//jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib//jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/MutationObservers/test/sidetable.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/MutationObservers/test/sidetable.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/nearest/jquery.nearest.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/nearest/jquery.nearest.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/MutationObservers/MutationObserver.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/MutationObservers/MutationObserver.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.contentMenu.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.contentMenu.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.mobile.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.mobile.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.seo.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.seo.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.tour.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.tour.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.tour.banner.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.tour.banner.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.snippets.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.snippets.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.ace.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.ace.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.translator.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.translator.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_embed/static/src/js/website.tour.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_embed/static/src/js/website.tour.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_embed/static/src/js/website.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_embed/static/src/js/website.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_blog/static/src/js/website_blog.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_blog/static/src/js/website_blog.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_blog/static/src/js/website.tour.blog.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_blog/static/src/js/website.tour.blog.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_mail/static/src/js/website_email_designer.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_mail/static/src/js/website_email_designer.js defined in bundle 'website.assets_editor'.");;
+
+/* /builder/static/src/js/website_page_designer.js defined in bundle 'website.assets_editor' */
+(function(){'use strict';var website=openerp.website;website.if_dom_contains('#page_designer',function(){website.snippet.BuildingBlock.include({_get_snippet_url:function(){return'/website/snippets';}});$('.js_template_set').click(function(ev){openerp.website.editor_bar.edit();event.preventDefault();});});})();;
+
+/* /help_online/static/src/js/website_help_online.editor.js defined in bundle 'website.assets_editor' */
+(function(){'use strict';var website=openerp.website;var _t=openerp._t;website.RTE.include({_config:function(){var config=this._super();config.plugins=config.plugins.concat(',link');_.each(config.toolbar,function(tb){if(tb.name==='span'){tb.items.unshift('Anchor');}});return config;},});})();;
+
+/* /tag_website_landing_pages/static/src/js/website_landing.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /tag_website_landing_pages/static/src/js/website_landing.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+var CKEDITOR_BASEPATH='/web/static/lib/ckeditor/';;
+
+/* /web/static/lib/select2/select2.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/select2/select2.js defined in bundle 'website.assets_editor'.");;
+
+/* /web/static/lib/ckeditor/ckeditor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/ckeditor/ckeditor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/ace.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/ace.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/theme-monokai.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/theme-monokai.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/ace/mode-xml.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/ace/mode-xml.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/vkbeautify/vkbeautify.0.99.00.beta.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/vkbeautify/vkbeautify.0.99.00.beta.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/jQuery.transfo.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/jQuery.transfo.js defined in bundle 'website.assets_editor'.");;
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+$.fn.bstooltip=$.fn.tooltip;$.fn.bsbutton=$.fn.button;;
+
+/* /web/static/lib/jquery.ui/js/jquery-ui-1.9.1.custom.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /web/static/lib/jquery.ui/js/jquery-ui-1.9.1.custom.js defined in bundle 'website.assets_editor'.");;
+
+/* <inline asset> defined in bundle 'website.assets_editor' */
+$.fn.tooltip=$.fn.bstooltip;$.fn.button=$.fn.bsbutton;;
+
+/* /website/static/lib//jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib//jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/MutationObservers/test/sidetable.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/MutationObservers/test/sidetable.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/nearest/jquery.nearest.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/nearest/jquery.nearest.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/lib/MutationObservers/MutationObserver.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/lib/MutationObservers/MutationObserver.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.contentMenu.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.contentMenu.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.mobile.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.mobile.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.seo.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.seo.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.tour.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.tour.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.tour.banner.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.tour.banner.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.snippets.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.snippets.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.ace.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.ace.js defined in bundle 'website.assets_editor'.");;
+
+/* /website/static/src/js/website.translator.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website/static/src/js/website.translator.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_sale/static/src/js/website_sale.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_sale/static/src/js/website_sale.editor.js defined in bundle 'website.assets_editor'.");;
+
+/* /website_sale/static/src/js/website_sale_tour_shop.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /website_sale/static/src/js/website_sale_tour_shop.js defined in bundle 'website.assets_editor'.");;
+
+/* /mass_mailing/static/src/js/website_mass_mailing.editor.js defined in bundle 'website.assets_editor' */
+console.error("Could not get content for /mass_mailing/static/src/js/website_mass_mailing.editor.js defined in bundle 'website.assets_editor'.");

@@ -1,0 +1,45 @@
+
+/* /web/static/lib/es5-shim/es5-shim.min.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/es5-shim/es5-shim.min.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/underscore/underscore.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/underscore/underscore.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/underscore.string/lib/underscore.string.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/underscore.string/lib/underscore.string.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/datejs/globalization/en-US.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/datejs/globalization/en-US.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/spinjs/spin.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/spinjs/spin.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery/jquery.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery/jquery.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.blockUI/jquery.blockUI.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.blockUI/jquery.blockUI.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.hotkeys/jquery.hotkeys.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.hotkeys/jquery.hotkeys.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.placeholder/jquery.placeholder.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.placeholder/jquery.placeholder.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.timeago/jquery.timeago.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.timeago/jquery.timeago.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.form/jquery.form.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.form/jquery.form.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/jquery.ba-bbq/jquery.ba-bbq.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/jquery.ba-bbq/jquery.ba-bbq.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/lib/qweb/qweb2.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/lib/qweb/qweb2.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/src/js/openerpframework.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/src/js/openerpframework.js defined in bundle 'web.assets_common'.");;
+
+/* /web/static/src/js/tour.js defined in bundle 'web.assets_common' */
+console.error("Could not get content for /web/static/src/js/tour.js defined in bundle 'web.assets_common'.");
